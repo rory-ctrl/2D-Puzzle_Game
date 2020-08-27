@@ -61,3 +61,5 @@ crashlytics-build.properties
 *.asset
 2D Puzzle Game/ProjectSettings/ProjectSettings.asset
 *.asset
+2D Puzzle Game/ProjectSettings/TagManager.asset
+2D Puzzle Game/ProjectSettings/TagManager.asset
