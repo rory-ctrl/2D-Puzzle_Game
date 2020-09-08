@@ -6,10 +6,12 @@ public class Bullet : MonoBehaviour
 {
     public Rigidbody2D rb;
     public float speed =20f;
-
+    public float lifeTime = 5f;
     // Start is called before the first frame update
+    
     void Start()
     {
+        Destroy(gameObject, lifeTime);
         rb.velocity=transform.right*speed;
     }
 
