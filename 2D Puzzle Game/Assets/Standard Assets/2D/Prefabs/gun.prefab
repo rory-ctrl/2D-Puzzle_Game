@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 9165397176818924343}
   - component: {fileID: 9165397176818924342}
   - component: {fileID: 9165397176818924341}
-  m_Layer: 0
+  - component: {fileID: 8615647755180640630}
+  m_Layer: 9
   m_Name: gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 9165397176818924336}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.202, y: -0.13800001, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children:
   - {fileID: 9165397177504280148}
   m_Father: {fileID: 0}
@@ -97,6 +98,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 9165397177504280148}
   bullet: {fileID: 6290203979887126066, guid: 07471226c28191c4bb5d2cad9950c246, type: 3}
+--- !u!61 &8615647755180640630
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9165397176818924336}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.04582522, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.32, y: 0.32}
+    newSize: {x: 0.32, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.22834955, y: 0.32}
+  m_EdgeRadius: 0
 --- !u!1 &9165397177504280149
 GameObject:
   m_ObjectHideFlags: 0
@@ -106,7 +133,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9165397177504280148}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: firepoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +148,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9165397177504280149}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.128, y: -0.021999985, z: 0}
+  m_LocalPosition: {x: 0.278, y: -0.021999985, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9165397176818924343}

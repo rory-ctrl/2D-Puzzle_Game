@@ -20,7 +20,14 @@ public class Bullet : MonoBehaviour
     {
         
     }
-    void OnTriggerEnter2D(){
-        Destroy(gameObject);
+    void OnTriggerEnter2D(Collider2D target){
+        switch(target.tag){
+            case "Terrain":
+                 Destroy(gameObject);
+                 break;
+            default:
+                break;
+        
+    }
     }
 }
