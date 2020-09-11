@@ -8,17 +8,16 @@ public class DragObjects : MonoBehaviour
     /*
      * This script is used to pick up and move objects within the scene 
      */
-    GameObject playerController;
+    public Transform inFrontOfPlayer;
     // Start is called before the first frame update
     void Start()
     {
-        //function currently not used
     }
 
     // Update is called once per frame
     void Update()
     {
-
+    
     }
 
     /*
@@ -29,15 +28,17 @@ public class DragObjects : MonoBehaviour
      */
     private void OnMouseDown()
     {
-        GetComponent<Rigidbody2D>().useAutoMass = false;
+        GetComponent<Rigidbody2D>().isKinematic = true;
+        GetComponent<Rigidbody2D>().mass = 20;
+        this.transform.position = inFrontOfPlayer.position;
         this.transform.parent = GameObject.Find("ObjectHold").transform;
-        GetComponent<Rigidbody2D>().mass = 5;
-       
+
     }
 
     private void OnMouseUp()
     {
+        GetComponent<Rigidbody2D>().isKinematic = false;
         this.transform.parent = null;
-        GetComponent<Rigidbody2D>().mass = 500;
+        GetComponent<Rigidbody2D>().mass = 200;
     }
 }
