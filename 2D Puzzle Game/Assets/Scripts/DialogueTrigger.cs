@@ -10,10 +10,15 @@ public class DialogueTrigger : MonoBehaviour
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
     }
 
+    public void Interact(){
+
+    }
+
     void OnTriggerEnter2D(Collider2D trigger){
         GameObject player = GameObject.Find("Player");
 
         if(player!= null){
+            // Interact();
             TriggerDialogue();
         }
     }

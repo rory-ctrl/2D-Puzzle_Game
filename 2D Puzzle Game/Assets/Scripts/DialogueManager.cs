@@ -10,6 +10,7 @@ public class DialogueManager : MonoBehaviour
     public Text nameText;
     public Text dialogueText;
     private Queue<string> sentences;
+    private IEnumerator cor;
 
     // Start is called before the first frame update
     void Start()
@@ -42,7 +43,8 @@ public class DialogueManager : MonoBehaviour
         string sentence = sentences.Dequeue();
 
         StopAllCoroutines();
-        StartCoroutine(TypeSentence(sentence));
+        cor=TypeSentence(sentence);
+        StartCoroutine(cor);
         // Debug.Log(sentence);
         // dialogueText.text = sentence;
     }
@@ -57,6 +59,7 @@ public class DialogueManager : MonoBehaviour
     public void EndDialogue(){
         // Debug.Log("End of convo");
         animator.SetBool("IsOpen",false);
+        StopCoroutine(cor);
     }
 
 }
