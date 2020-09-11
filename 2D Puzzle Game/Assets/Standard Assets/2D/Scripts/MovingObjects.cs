@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 
-public class DragObjects : MonoBehaviour
+public class MovingObjects : MonoBehaviour
 {
     /*
      * This script is used to pick up and move objects within the scene 
