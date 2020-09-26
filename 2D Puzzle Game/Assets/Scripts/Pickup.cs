@@ -11,7 +11,6 @@ public class Pickup : MonoBehaviour
     public Transform WeaponPoint;
     public Transform PickupPoint;
     // Start is called before the first frame update
-    //bool test=UnityStandardAssets._2D.Platformer2DUserControl.getStatus();
     void Start()
     {
         

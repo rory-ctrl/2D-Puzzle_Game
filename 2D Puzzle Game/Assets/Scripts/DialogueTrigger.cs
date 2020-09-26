@@ -27,7 +27,7 @@ public class DialogueTrigger : MonoBehaviour
         GameObject player = GameObject.Find("Player");
 
         if(player!= null){
-             FindObjectOfType<DialogueManager>().EndDialogue();
+            FindObjectOfType<DialogueManager>().EndDialogue();
         }
     }
 }
