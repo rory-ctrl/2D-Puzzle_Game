@@ -11,10 +11,11 @@ namespace UnityStandardAssets._2D
         [Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;  // Amount of maxSpeed applied to crouching movement. 1 = 100%
         [SerializeField] private bool m_AirControl = false;                 // Whether or not a player can steer while jumping;
         [SerializeField] private LayerMask m_WhatIsGround;                  // A mask determining what is ground to the character
-
+        private Transform pickup;
         private Transform m_GroundCheck;    // A position marking where to check if the player is grounded.
         const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
         private bool m_Grounded;            // Whether or not the player is grounded.
+        public static bool holding_Weapon=false;  //Boolean for wether the palyer is holding a weapon 
         private Transform m_CeilingCheck;   // A position marking where to check for ceilings
         const float k_CeilingRadius = .01f; // Radius of the overlap circle to determine if the player can stand up
         private Animator m_Anim;            // Reference to the player's animator component.
@@ -44,13 +45,26 @@ namespace UnityStandardAssets._2D
                     m_Grounded = true;
             }
             m_Anim.SetBool("Ground", m_Grounded);
-
+            m_Anim.SetBool("HoldingWeapon",holding_Weapon);
             // Set the vertical animation
             m_Anim.SetFloat("vSpeed", m_Rigidbody2D.velocity.y);
+            //Hides the weapon if the player is currently sliding or crouching
+            if(m_Anim.GetCurrentAnimatorStateInfo(0).IsName("Jumping")||m_Anim.GetCurrentAnimatorStateInfo(0).IsName("Slide")||m_Anim.GetCurrentAnimatorStateInfo(0).IsName("Crouch")){
+               foreach (Transform child in transform)
+                    {
+                    child.gameObject.SetActive(false);
+                     } 
+            }
+            else{
+                foreach (Transform child in transform)
+                    {
+                    child.gameObject.SetActive(true);
+                     } 
+            }
         }
 
 
-        public void Move(float move, bool crouch, bool jump)
+        public void Move(float move, bool crouch, bool jump, bool slide)
         {
             // If crouching, check to see if the character can stand up
             if (!crouch && m_Anim.GetBool("Crouch"))
@@ -61,7 +75,7 @@ namespace UnityStandardAssets._2D
                     crouch = true;
                 }
             }
-
+            
             // Set whether or not the character is crouching in the animator
             m_Anim.SetBool("Crouch", crouch);
 
@@ -97,6 +111,12 @@ namespace UnityStandardAssets._2D
                 m_Grounded = false;
                 m_Anim.SetBool("Ground", false);
                 m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+
+            }
+            if(slide && m_Grounded)
+            {
+                m_Rigidbody2D.AddForce(new Vector2(0f, 0f));
+                m_Anim.Play("Slide");
             }
         }
 
@@ -111,5 +131,6 @@ namespace UnityStandardAssets._2D
             theScale.x *= -1;
             transform.localScale = theScale;*/
         }
+        
     }
 }

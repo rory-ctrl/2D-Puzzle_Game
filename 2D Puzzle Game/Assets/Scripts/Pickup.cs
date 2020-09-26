@@ -19,7 +19,6 @@ public class Pickup : MonoBehaviour
     
     void Update()
     {
-
         if(Input.GetKeyDown("e")){
            if(item!=null){
                //Places a copy of the currently held wepaon on the ground before deleteing it from the player
