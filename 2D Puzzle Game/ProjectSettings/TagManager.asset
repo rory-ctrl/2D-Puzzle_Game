@@ -18,9 +18,9 @@ TagManager:
   - 
   - Player
   - Weapon
-  - 
-  - 
-  - 
+  - Foreground
+  - Background_01
+  - Background_02
   - 
   - 
   - 
@@ -43,4 +43,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background_02
+    uniqueID: 2301924043
+    locked: 0
+  - name: Background_01
+    uniqueID: 255166391
+    locked: 0
+  - name: Foreground (Tiles)
+    uniqueID: 3446533093
+    locked: 0
+  - name: Foreground (Misc)
+    uniqueID: 3526007943
+    locked: 0
+  - name: Player
+    uniqueID: 1785429357
     locked: 0
