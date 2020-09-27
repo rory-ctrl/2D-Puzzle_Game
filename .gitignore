@@ -395,7 +395,6 @@ MigrationBackup/
 # Never ignore Asset meta data
 ![Aa]ssets/**/*.meta
 ![Aa]ssets/**/*.*.meta
-!*.*.meta
 
 
 # End of https://www.gitignore.io/api/unity,visualstudio
