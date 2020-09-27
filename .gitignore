@@ -61,3 +61,6 @@ crashlytics-build.properties
 *.asset
 2D Puzzle Game/ProjectSettings/TagManager.asset
 2D Puzzle Game/ProjectSettings/TagManager.asset
+
+# Never ignore Asset meta data
+![Aa]ssets/**/*.meta
