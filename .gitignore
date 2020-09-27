@@ -394,6 +394,7 @@ MigrationBackup/
 
 # Never ignore Asset meta data
 ![Aa]ssets/**/*.meta
+![Aa]ssets/**/*.asset
 ![Aa]ssets/**/*.*.meta
 
 
