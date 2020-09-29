@@ -21,7 +21,8 @@ namespace UnityStandardAssets._2D
         private Animator m_Anim;            // Reference to the player's animator component.
         private Rigidbody2D m_Rigidbody2D;
         private bool m_FacingRight = true;  // For determining which way the player is currently facing.
-
+        BoxCollider2D m_Collider;
+         
         private void Awake()
         {
             // Setting up references.
@@ -29,12 +30,24 @@ namespace UnityStandardAssets._2D
             m_CeilingCheck = transform.Find("CeilingCheck");
             m_Anim = GetComponent<Animator>();
             m_Rigidbody2D = GetComponent<Rigidbody2D>();
+            m_Collider = GetComponent<BoxCollider2D>();
         }
 
 
         private void FixedUpdate()
         {
+            //Disables collision if the player is currently sliding
+            if(m_Anim.GetCurrentAnimatorStateInfo(0).IsName("Slide")){
+                m_Collider.enabled=false;
+                //m_Collider.size=new Vector2(1,2);
+                 Debug.Log("Current BoxCollider Size : " + m_Collider.size);
+            }
+            else{
+                //m_Collider.size=new Vector2(1,2);
+                m_Collider.enabled=true;
+            }
             m_Grounded = false;
+            Debug.Log(m_Grounded);
 
             // The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
             // This can be done using layers instead but Sample Assets will not overwrite your project settings.
@@ -43,7 +56,9 @@ namespace UnityStandardAssets._2D
             {
                 if (colliders[i].gameObject != gameObject)
                     m_Grounded = true;
+                    Debug.Log(m_Grounded);
             }
+            Debug.Log(m_Grounded);
             m_Anim.SetBool("Ground", m_Grounded);
             m_Anim.SetBool("HoldingWeapon",holding_Weapon);
             // Set the vertical animation
@@ -115,6 +130,7 @@ namespace UnityStandardAssets._2D
             }
             if(slide && m_Grounded)
             {
+                //Can be used toa dd force to the player if needed
                 m_Rigidbody2D.AddForce(new Vector2(0f, 0f));
                 m_Anim.Play("Slide");
             }
