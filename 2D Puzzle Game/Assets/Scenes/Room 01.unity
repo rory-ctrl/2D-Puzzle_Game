@@ -452,7 +452,12 @@ PrefabInstance:
     - target: {fileID: 5507440003932078636, guid: 2291b9b58fa068a4c8b235710fafb531,
         type: 3}
       propertyPath: m_WhatIsGround.m_Bits
-      value: 1025
+      value: 1024
+      objectReference: {fileID: 0}
+    - target: {fileID: 5507440003932078636, guid: 2291b9b58fa068a4c8b235710fafb531,
+        type: 3}
+      propertyPath: m_AirControl
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5507440003938629578, guid: 2291b9b58fa068a4c8b235710fafb531,
         type: 3}
