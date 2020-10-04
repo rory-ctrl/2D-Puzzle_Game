@@ -15375,7 +15375,7 @@ GameObject:
   - component: {fileID: 224598642}
   - component: {fileID: 224598644}
   - component: {fileID: 224598643}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: PickupPoint
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -15445,7 +15445,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 484621788}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: CeilingCheck
   m_TagString: Untagged
   m_Icon: {fileID: -2065832391, guid: 0000000000000000d000000000000000, type: 0}
@@ -15475,7 +15475,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 514534344}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: WeaponPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15505,7 +15505,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 718654836}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: -2065832391, guid: 0000000000000000d000000000000000, type: 0}
@@ -15542,7 +15542,7 @@ GameObject:
   - component: {fileID: 855149765}
   - component: {fileID: 855149764}
   - component: {fileID: 855149763}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: TimeAgentPlayer
   m_TagString: Player
   m_Icon: {fileID: 0}

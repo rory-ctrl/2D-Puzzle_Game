@@ -227,7 +227,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 718838159}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acc3a4fb684cb1d479b86a913c870d78, type: 3}
+  m_Script: {fileID: 11500000, guid: 541430e23a52eab47851ea6729359f9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &773729135
@@ -476,7 +476,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: MainScene
+          m_StringArgument: Room 01
           m_BoolArgument: 0
         m_CallState: 1
 --- !u!114 &1045087320
