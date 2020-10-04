@@ -47,7 +47,7 @@ namespace UnityStandardAssets._2D
                 m_Collider.enabled=true;
             }
             m_Grounded = false;
-            Debug.Log(m_Grounded);
+
 
             // The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
             // This can be done using layers instead but Sample Assets will not overwrite your project settings.
@@ -56,9 +56,7 @@ namespace UnityStandardAssets._2D
             {
                 if (colliders[i].gameObject != gameObject)
                     m_Grounded = true;
-                    Debug.Log(m_Grounded);
             }
-            Debug.Log(m_Grounded);
             m_Anim.SetBool("Ground", m_Grounded);
             m_Anim.SetBool("HoldingWeapon",holding_Weapon);
             // Set the vertical animation
