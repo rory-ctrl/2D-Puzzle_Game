@@ -15,7 +15,7 @@ public class DialogueTrigger : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D trigger){
-        GameObject player = GameObject.Find("Player");
+        GameObject player = GameObject.Find("TimeAgentPlayer");
 
         if(player!= null){
             // Interact();
@@ -24,7 +24,7 @@ public class DialogueTrigger : MonoBehaviour
     }
 
     void OnTriggerExit2D(Collider2D trigger){
-        GameObject player = GameObject.Find("Player");
+        GameObject player = GameObject.Find("TimeAgentPlayer");
 
         if(player!= null){
             FindObjectOfType<DialogueManager>().EndDialogue();
