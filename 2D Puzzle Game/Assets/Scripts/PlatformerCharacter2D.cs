@@ -2,8 +2,6 @@ using System;
 using UnityEngine;
 
 #pragma warning disable 649
-namespace UnityStandardAssets._2D
-{
     public class PlatformerCharacter2D : MonoBehaviour
     {
         [SerializeField] private float m_MaxSpeed = 10f;                    // The fastest the player can travel in the x axis.
@@ -23,6 +21,9 @@ namespace UnityStandardAssets._2D
         private bool m_FacingRight = true;  // For determining which way the player is currently facing.
         BoxCollider2D m_Collider;
 
+        private bool m_isTalking = false;
+        private GameObject m_weapon;
+
         public int m_maxHealth = 100;
         public int m_maxTime = 100;
         public int m_currentHealth;
@@ -38,11 +39,20 @@ namespace UnityStandardAssets._2D
             m_Collider = GetComponent<BoxCollider2D>();
             m_currentHealth = m_maxHealth;
             m_currentTime = m_maxTime;
+            m_weapon = GameObject.Find("GunPlaceholder");
         }
 
 
         private void FixedUpdate()
         {
+            if(m_isTalking){
+                m_Rigidbody2D.velocity = new Vector2(0f,0f);
+            }
+
+            if(holding_Weapon){
+                m_weapon.GetComponent<DisplayController>().toggleVisible();
+            }
+
             //Disables collision if the player is currently sliding
             if(m_Anim.GetCurrentAnimatorStateInfo(0).IsName("Slide")){
                 m_Collider.enabled=false;
@@ -161,5 +171,7 @@ namespace UnityStandardAssets._2D
             m_currentTime -= time;
         }
         
+        public void setTalking(bool check){
+            m_isTalking = check;
+        }
     }
-}
