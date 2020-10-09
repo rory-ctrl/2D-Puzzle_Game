@@ -28,6 +28,8 @@ using UnityEngine;
         public int m_maxTime = 100;
         public int m_currentHealth;
         public int m_currentTime;
+        private Inventory m_inventory;
+        [SerializeField] private UI_Inventory ui_Inventory;
          
         private void Awake()
         {
@@ -40,6 +42,10 @@ using UnityEngine;
             m_currentHealth = m_maxHealth;
             m_currentTime = m_maxTime;
             m_weapon = GameObject.Find("GunPlaceholder");
+
+            m_inventory = new Inventory();
+            ui_Inventory.setInventory(m_inventory);
+
         }
 
 
