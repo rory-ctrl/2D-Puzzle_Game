@@ -42,9 +42,9 @@ using UnityEngine;
             m_currentHealth = m_maxHealth;
             m_currentTime = m_maxTime;
             m_weapon = GameObject.Find("GunPlaceholder");
-
+            
             m_inventory = new Inventory();
-            ui_Inventory.setInventory(m_inventory);
+           // ui_Inventory.setInventory(m_inventory);
 
         }
 

@@ -7,7 +7,7 @@ public class Shoot : MonoBehaviour
     public Transform firePoint;
     public GameObject bullet;
     private double fireRate=0.4;
-
+    public AudioSource audioData;
      private double lastShot = 0.0;
 
     // Update is called once per frame
@@ -18,6 +18,7 @@ public class Shoot : MonoBehaviour
             if((gameObject.transform.parent!=null)){
                 if(gameObject.transform.parent.tag=="Player"){
                     fire();
+                    
                     
             }
         }
@@ -30,6 +31,7 @@ public class Shoot : MonoBehaviour
      {
          Instantiate(bullet, firePoint.position, firePoint.rotation);  
          lastShot = Time.time;
+         audioData.Play(0);
      }
         
     }
