@@ -20,6 +20,7 @@ using UnityEngine;
         private Rigidbody2D m_Rigidbody2D;
         private bool m_FacingRight = true;  // For determining which way the player is currently facing.
         BoxCollider2D m_Collider;
+        public CircleCollider2D grounddetect;
 
         private bool m_isTalking = false;
         private GameObject m_weapon;
@@ -65,6 +66,10 @@ using UnityEngine;
                 //m_Collider.size=new Vector2(1,2);
                  Debug.Log("Current BoxCollider Size : " + m_Collider.size);
             }
+            if(m_Anim.GetCurrentAnimatorStateInfo(0).IsName("Crouch")||m_Anim.GetCurrentAnimatorStateInfo(0).IsName("CrouchingWalk")){
+                //m_Collider.enabled=false;
+                m_Collider.size=new Vector2(1,2);
+            }
             else{
                 //m_Collider.size=new Vector2(1,2);
                 m_Collider.enabled=true;
@@ -85,7 +90,7 @@ using UnityEngine;
             // Set the vertical animation
             m_Anim.SetFloat("vSpeed", m_Rigidbody2D.velocity.y);
             //Hides the weapon if the player is currently sliding or crouching
-            if(m_Anim.GetCurrentAnimatorStateInfo(0).IsName("Jumping")||m_Anim.GetCurrentAnimatorStateInfo(0).IsName("Slide")||m_Anim.GetCurrentAnimatorStateInfo(0).IsName("Crouch")){
+            if(m_Anim.GetCurrentAnimatorStateInfo(0).IsName("Jumping")||m_Anim.GetCurrentAnimatorStateInfo(0).IsName("Slide")||m_Anim.GetCurrentAnimatorStateInfo(0).IsName("Crouch")||m_Anim.GetCurrentAnimatorStateInfo(0).IsName("CrouchingWalk")){
                foreach (Transform child in transform)
                     {
                     child.gameObject.SetActive(false);
@@ -151,7 +156,7 @@ using UnityEngine;
             }
             if(slide && m_Grounded)
             {
-                //Can be used toa dd force to the player if needed
+                //Can be used to add force to the player if needed
                 m_Rigidbody2D.AddForce(new Vector2(0f, 0f));
                 m_Anim.Play("Slide");
             }
@@ -169,7 +174,7 @@ using UnityEngine;
             transform.localScale = theScale;*/
         }
 
-        private void TakeDamage(int damage){
+        public void TakeDamage(int damage){
             m_currentHealth -= damage;
         }
 

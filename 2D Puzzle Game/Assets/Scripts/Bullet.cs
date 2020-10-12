@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour
 {
     public Rigidbody2D rb;
     public float speed =20f;
+    public int damage=20;
     public float lifeTime = 5f;
     // Start is called before the first frame update
     
@@ -25,6 +26,14 @@ public class Bullet : MonoBehaviour
             case "Terrain":
                  Destroy(gameObject);
                  break;
+            case "Enemy":
+                Destroy(target.gameObject);
+                Destroy(gameObject);
+                break;
+            case "Player":
+                target.gameObject.GetComponent<PlatformerCharacter2D>().TakeDamage(damage);
+                Destroy(gameObject);
+                break;
             default:
                 break;
         
