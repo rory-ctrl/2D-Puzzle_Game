@@ -31,6 +31,8 @@ using UnityEngine;
         public int m_currentTime;
         private Inventory m_inventory;
         [SerializeField] private UI_Inventory ui_Inventory;
+        public AudioClip jumpSound;
+        private AudioSource playerAudio;
          
         private void Awake()
         {
