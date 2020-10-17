@@ -47,12 +47,22 @@ using UnityEngine;
             m_weapon = GameObject.Find("GunPlaceholder");
             
             m_inventory = new Inventory();
-           // ui_Inventory.setInventory(m_inventory);
+        // ui_Inventory.setInventory(m_inventory);
+            playerAudio = GetComponent<AudioSource>();
 
         }
 
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Space) && m_Grounded)
+            {
 
-        private void FixedUpdate()
+                playerAudio.PlayOneShot(jumpSound, 1.0f);
+
+            }
+        }
+
+    private void FixedUpdate()
         {
             if(m_isTalking){
                 m_Rigidbody2D.velocity = new Vector2(0f,0f);
