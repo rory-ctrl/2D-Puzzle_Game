@@ -333,7 +333,7 @@ GameObject:
   - component: {fileID: 1153106313122110150}
   - component: {fileID: 5190433275355740965}
   m_Layer: 5
-  m_Name: Text
+  m_Name: ScoreText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -418,7 +418,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &5040348058556372508
 RectTransform:
   m_ObjectHideFlags: 0
@@ -562,7 +562,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2888961165940121030}
   m_Layer: 5
-  m_Name: ItemSlotContainer
+  m_Name: ItemSlots
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1030,6 +1030,7 @@ GameObject:
   - component: {fileID: 5737206411855316798}
   - component: {fileID: 5721853585931229192}
   - component: {fileID: 8370915262460583320}
+  - component: {fileID: 4024429359423596357}
   m_Layer: 5
   m_Name: CurrencySlot
   m_TagString: Untagged
@@ -1095,6 +1096,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4024429359423596357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3907875966525069930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61b188a1c724c2a4fa0d7cdaeeab795e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4570531648844145440
 GameObject:
   m_ObjectHideFlags: 0

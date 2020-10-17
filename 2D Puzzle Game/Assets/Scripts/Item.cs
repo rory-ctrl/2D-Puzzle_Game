@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    [SerializeField] private UI_Inventory inventory;
+    // [SerializeField] private UI_Inventory inventory;
 
     // public void Awake(){
     //     inventory = GameObject.Find("UI_TopBar");
     // }
 
-    [SerializeField]
-    public enum ItemType {
-        Weapon,
-        Bullet,
-        Currency
-    }
+    // [SerializeField]
+    // public enum ItemType {
+    //     Weapon,
+    //     Bullet,
+    //     Currency
+    // }
 
-    public ItemType itemType;
+    // public ItemType itemType;
 
     [SerializeField]
     public int amount;
@@ -25,17 +25,20 @@ public class Item : MonoBehaviour
     void OnTriggerEnter2D(Collider2D trigger){
         GameObject player = GameObject.Find("TimeAgentPlayer");
 
-        if(player!= null){
+        if(trigger.tag == "Player"){
             // Interact();
-            pickUp();
+            Debug.Log("Collision");
+            GameValues.score += this.amount;
+            // trigger.gameObject.GetComponent<PlatformerCharacter2D>().addCrystals(this.amount);
+            Destroy(this.gameObject);
         }
     }
 
-    public void pickUp(){
-        if(this.itemType == ItemType.Currency){
-            inventory.addCurrency(amount);
-            Debug.Log(amount);
-            Destroy(this);
-        }
-    }
+    // public void pickUp(){
+    //     if(this.itemType == ItemType.Currency){
+    //         inventory.addCurrency(amount);
+    //         Debug.Log(amount);
+    //         Destroy(this);
+    //     }
+    // }
 }

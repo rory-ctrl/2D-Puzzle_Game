@@ -10,10 +10,12 @@ public class DisplayController : MonoBehaviour
     // public GameObject weapon;
     public Image m_weapon;    
     public Image m_bulletType;
+    public Image m_currency;
 
     private void Start(){
         m_weapon.enabled = false;
         m_bulletType.enabled = false;
+        m_currency.enabled = true;
     }
 
     public void toggleVisible(){

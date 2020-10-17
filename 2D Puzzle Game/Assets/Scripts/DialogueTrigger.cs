@@ -5,8 +5,11 @@ using UnityEngine;
 public class DialogueTrigger : MonoBehaviour
 {
     public Dialogue dialogue;
+    private bool hasTriggered = false;
 
     public void TriggerDialogue(){
+        GameValues.score = 0;
+        hasTriggered = true;
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
     }
 
@@ -17,9 +20,10 @@ public class DialogueTrigger : MonoBehaviour
     void OnTriggerEnter2D(Collider2D trigger){
         GameObject player = GameObject.Find("TimeAgentPlayer");
 
-        if(player!= null){
+        if(player!= null && !hasTriggered){
             // Interact();
             TriggerDialogue();
+            
         }
     }
 

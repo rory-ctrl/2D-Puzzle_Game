@@ -25,6 +25,10 @@ using UnityEngine;
         private bool m_isTalking = false;
         private GameObject m_weapon;
 
+        private HealthBar healthBar;
+        private TimeBar timeBar;
+
+        private int m_crystals;
         public int m_maxHealth = 100;
         public int m_maxTime = 100;
         public int m_currentHealth;
@@ -37,11 +41,19 @@ using UnityEngine;
         private void Awake()
         {
             // Setting up references.
+            healthBar = GameObject.Find("HealthBar").GetComponent<HealthBar>();
+            timeBar = GameObject.Find("TimeBar").GetComponent<TimeBar>();
+
             m_GroundCheck = transform.Find("GroundCheck");
             m_CeilingCheck = transform.Find("CeilingCheck");
             m_Anim = GetComponent<Animator>();
             m_Rigidbody2D = GetComponent<Rigidbody2D>();
             m_Collider = GetComponent<BoxCollider2D>();
+            m_crystals = 0;
+
+            healthBar.setMaxHealth(m_maxHealth);
+            timeBar.setMaxTime(m_maxTime);
+
             m_currentHealth = m_maxHealth;
             m_currentTime = m_maxTime;
             m_weapon = GameObject.Find("GunPlaceholder");
@@ -186,12 +198,24 @@ using UnityEngine;
             transform.localScale = theScale;*/
         }
 
+        public int getCrystals(){
+            return m_crystals;
+        }
+
+        public void addCrystals(int amount){
+            m_crystals += amount;
+        }
+
         public void TakeDamage(int damage){
             m_currentHealth -= damage;
+
+            healthBar.setHealth(m_currentHealth);
         }
 
         private void UseTime(int time){
             m_currentTime -= time;
+
+            timeBar.setTime(m_currentTime);
         }
         
         public void setTalking(bool check){
