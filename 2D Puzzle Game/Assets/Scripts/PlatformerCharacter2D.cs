@@ -1,9 +1,11 @@
 using System;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
+using System.Collections;
 #pragma warning disable 649
     public class PlatformerCharacter2D : MonoBehaviour
     {
+        
         [SerializeField] private float m_MaxSpeed = 10f;                    // The fastest the player can travel in the x axis.
         [SerializeField] private float m_JumpForce = 400f;                  // Amount of force added when the player jumps.
         [Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;  // Amount of maxSpeed applied to crouching movement. 1 = 100%
@@ -73,7 +75,15 @@ using UnityEngine;
 
             }
         }
-
+    
+     //Function for killing the player, plays the death animation and then waits 2 seconds before reloading the scene
+     IEnumerator die(){
+        m_Anim.SetBool("death",true);
+        yield return new WaitForSeconds(2);
+        //Reloads the scene on death
+        int scene = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(scene, LoadSceneMode.Single);
+    }
     private void FixedUpdate()
         {
             if(m_isTalking){
@@ -208,8 +218,10 @@ using UnityEngine;
 
         public void TakeDamage(int damage){
             m_currentHealth -= damage;
-
             healthBar.setHealth(m_currentHealth);
+            if( m_currentHealth<=0){
+                StartCoroutine(die()); 
+            }
         }
 
         private void UseTime(int time){
