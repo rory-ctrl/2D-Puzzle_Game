@@ -69,7 +69,7 @@ using UnityEngine;
             if (Input.GetKeyDown(KeyCode.Space) && m_Grounded)
             {
 
-                playerAudio.PlayOneShot(jumpSound, 1.0f);
+                playerAudio.PlayOneShot(jumpSound, 0.5f);
 
             }
         }

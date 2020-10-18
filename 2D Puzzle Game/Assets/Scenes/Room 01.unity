@@ -614,7 +614,7 @@ PrefabInstance:
         type: 3}
       propertyPath: jumpSound
       value: 
-      objectReference: {fileID: 8300000, guid: c2f510425c0935842bb1a75ec2f8aaa1, type: 3}
+      objectReference: {fileID: 8300000, guid: 7250925503d24ac4184011ccade045dd, type: 3}
     - target: {fileID: 5507440003932078636, guid: 2291b9b58fa068a4c8b235710fafb531,
         type: 3}
       propertyPath: healthBar
@@ -714,6 +714,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.38560516
+      objectReference: {fileID: 0}
+    - target: {fileID: 5507440003943280942, guid: 2291b9b58fa068a4c8b235710fafb531,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5507440003959705070, guid: 2291b9b58fa068a4c8b235710fafb531,
         type: 3}
