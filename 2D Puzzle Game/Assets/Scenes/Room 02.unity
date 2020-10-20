@@ -19257,7 +19257,7 @@ MonoBehaviour:
   m_currentHealth: 0
   m_currentTime: 0
   ui_Inventory: {fileID: 0}
-  jumpSound: {fileID: 8300000, guid: c2f510425c0935842bb1a75ec2f8aaa1, type: 3}
+  jumpSound: {fileID: 8300000, guid: 7250925503d24ac4184011ccade045dd, type: 3}
 --- !u!50 &878146091
 Rigidbody2D:
   serializedVersion: 4
