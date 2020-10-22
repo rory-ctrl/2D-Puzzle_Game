@@ -10,7 +10,24 @@ public class DialogueTrigger : MonoBehaviour
     public void TriggerDialogue(){
         GameValues.score = 0;
         hasTriggered = true;
-        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+        if(this.name =="JumpTrigger"){
+            GameObject.Find("JumpDialogueManager").GetComponent<DialogueManager>().StartDialogue(dialogue);
+        }else if(this.name == "StartTrigger"){
+            GameObject.Find("StartDialogueManager").GetComponent<DialogueManager>().StartDialogue(dialogue);
+        }else if(this.name == "SecondLevelTrigger"){
+            // Debug.Log("Chat triggered");
+            GameObject.Find("SecondLevelDialogueManager").GetComponent<DialogueManager>().StartDialogue(dialogue);
+        }else if(this.name == "DeathDialogueTrigger"){
+            if(GameValues.respawns == 1){
+                GameObject.Find("DeathDialogueManager").GetComponent<DialogueManager>().StartDialogue(dialogue);
+            }
+        }else if(this.name == "CrouchDialogueTrigger"){
+            GameObject.Find("CrouchDialogueManager").GetComponent<DialogueManager>().StartDialogue(dialogue);
+        }
+        else if(this.name == "CrouchHelpDialogueTrigger"){
+            GameObject.Find("CrouchDialogueManager").GetComponent<DialogueManager>().StartDialogue(dialogue);
+        }
+        
     }
 
     public void Interact(){

@@ -12,61 +12,77 @@ using UnityEngine.UI;
         public Text dialogueText;
         public GameObject m_player;
         private Queue<string> sentences;
+        private Queue<string> characters;
         private IEnumerator cor;
         private PlatformerCharacter2D m_playerScript;
+
+        private Dialogue m_dialogue;
         private bool m_beenDismissed;
 
         // Start is called before the first frame update
         void Start()
         {
             sentences = new Queue<string>();
+            characters = new Queue<string>();
             m_beenDismissed = false;
             m_playerScript = m_player.GetComponent<PlatformerCharacter2D>();
         }
 
         public void StartDialogue(Dialogue dialogue){
-            if(!m_beenDismissed){
+                m_dialogue = dialogue;
                 // Debug.Log("Starting convo with " + dialogue.name);
                 animator.SetBool("IsOpen",true);
-                nameText.text = dialogue.name;
 
                 m_playerScript.setTalking(true);
                 sentences.Clear();
+                characters.Clear();
                 // m_player.GetComponent<PlatformerCharacter2D>
 
-                foreach(string sentence in dialogue.sentences){
+                foreach(string sentence in m_dialogue.sentences){
                     sentences.Enqueue(sentence);
+                }
+
+                foreach(string character in m_dialogue.names){
+                    characters.Enqueue(character);
                 }
                 
                 DisplayNextSentence();
-            }
             
         }
 
         public void DisplayNextSentence(){
+            
             if(sentences.Count == 0){
                 EndDialogue();
                 return;
             }
+            
+            if(characters.Count > 1 ){
+                string character = characters.Dequeue();
+                nameText.text = character;
+            }
+
+            if(sentences.Count < 2){
+                if(characters.Count > 0){
+                    nameText.text = characters.Dequeue();
+                }
+            }        
 
             string sentence = sentences.Dequeue();
-
             StopAllCoroutines();
-            cor=TypeSentence(sentence);
+            cor = TypeSentence(sentence);
             StartCoroutine(cor);
-            // Debug.Log(sentence);
-            // dialogueText.text = sentence;
         }
 
         IEnumerator TypeSentence (string sentence){
             dialogueText.text = "";
             foreach(char letter in sentence.ToCharArray()){
                 dialogueText.text +=letter;
-                yield return new WaitForSeconds(0.08f);
+                yield return new WaitForSeconds(0.04f);
             }
+            
         }
         public void EndDialogue(){
-            // Debug.Log("End of convo");
             animator.SetBool("IsOpen",false);
             StopCoroutine(cor);
             m_beenDismissed = true;

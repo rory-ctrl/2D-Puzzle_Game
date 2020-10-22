@@ -26,19 +26,9 @@ public class Item : MonoBehaviour
         GameObject player = GameObject.Find("TimeAgentPlayer");
 
         if(trigger.tag == "Player"){
-            // Interact();
-            Debug.Log("Collision");
             GameValues.score += this.amount;
-            // trigger.gameObject.GetComponent<PlatformerCharacter2D>().addCrystals(this.amount);
             Destroy(this.gameObject);
         }
     }
 
-    // public void pickUp(){
-    //     if(this.itemType == ItemType.Currency){
-    //         inventory.addCurrency(amount);
-    //         Debug.Log(amount);
-    //         Destroy(this);
-    //     }
-    // }
 }

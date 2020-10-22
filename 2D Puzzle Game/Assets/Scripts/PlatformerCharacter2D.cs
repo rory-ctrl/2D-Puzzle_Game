@@ -53,17 +53,18 @@ using System.Collections;
             m_Collider = GetComponent<BoxCollider2D>();
             m_crystals = 0;
 
-            healthBar.setMaxHealth(m_maxHealth);
-            timeBar.setMaxTime(m_maxTime);
+            
 
-            m_currentHealth = m_maxHealth;
+            m_currentHealth = GameValues.getPlayerHealth();
             m_currentTime = m_maxTime;
             m_weapon = GameObject.Find("GunPlaceholder");
             
             m_inventory = new Inventory();
         // ui_Inventory.setInventory(m_inventory);
             playerAudio = GetComponent<AudioSource>();
-
+            healthBar.setMaxHealth(m_maxHealth);
+            healthBar.setHealth(m_currentHealth);
+            timeBar.setMaxTime(m_maxTime);
         }
 
         private void Update()
@@ -83,6 +84,7 @@ using System.Collections;
         //Reloads the scene on death
         int scene = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(scene, LoadSceneMode.Single);
+        GameValues.respawns += 1;
     }
     private void FixedUpdate()
         {
@@ -136,6 +138,8 @@ using System.Collections;
                     child.gameObject.SetActive(true);
                      } 
             }
+
+            GameValues.setPlayerHealth(m_currentHealth);
         }
 
 
