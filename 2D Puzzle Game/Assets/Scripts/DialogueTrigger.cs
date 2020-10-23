@@ -37,6 +37,7 @@ public class DialogueTrigger : MonoBehaviour
         GameObject player = GameObject.Find("TimeAgentPlayer");
 
         if(player!= null && !hasTriggered){
+            // Debug.Log("Entered");
             TriggerDialogue();
         }
     }
@@ -45,6 +46,7 @@ public class DialogueTrigger : MonoBehaviour
         GameObject player = GameObject.Find("TimeAgentPlayer");
 
         if(player!= null){
+            // Debug.Log("left");
             FindObjectOfType<DialogueManager>().EndDialogue();
         }
     }

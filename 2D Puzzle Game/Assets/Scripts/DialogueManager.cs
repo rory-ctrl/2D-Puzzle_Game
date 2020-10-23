@@ -30,10 +30,9 @@ using UnityEngine.UI;
 
         public void StartDialogue(Dialogue dialogue){
                 m_dialogue = dialogue;
-                // Debug.Log("Starting convo with " + dialogue.name);
+                m_playerScript.setTalking(true);
                 animator.SetBool("IsOpen",true);
 
-                m_playerScript.setTalking(true);
                 sentences.Clear();
                 characters.Clear();
                 // m_player.GetComponent<PlatformerCharacter2D>
@@ -51,13 +50,14 @@ using UnityEngine.UI;
         }
 
         public void DisplayNextSentence(){
-            
+            m_playerScript.setTalking(true);
             if(sentences.Count == 0){
+                
                 EndDialogue();
                 return;
             }
             
-            m_playerScript.setTalking(true);
+            
 
             if(characters.Count > 1 ){
                 string character = characters.Dequeue();
@@ -71,7 +71,9 @@ using UnityEngine.UI;
             }        
 
             string sentence = sentences.Dequeue();
-            StopAllCoroutines();
+            if(cor != null){
+                StopCoroutine(cor);  
+            }
             cor = TypeSentence(sentence);
             StartCoroutine(cor);
         }
@@ -89,6 +91,7 @@ using UnityEngine.UI;
             animator.SetBool("IsOpen",false);
             if(cor != null){
                 StopCoroutine(cor);  
+                Debug.Log("finished");
             }
             // m_beenDismissed = true;
             m_playerScript.setTalking(false);

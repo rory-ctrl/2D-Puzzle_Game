@@ -75,6 +75,10 @@ using System.Collections;
                 playerAudio.PlayOneShot(jumpSound, 0.5f);
 
             }
+
+            if(m_isTalking){
+                m_Rigidbody2D.velocity = new Vector2(0f,0f);
+            }
         }
     
      //Function for killing the player, plays the death animation and then waits 2 seconds before reloading the scene
@@ -88,9 +92,7 @@ using System.Collections;
     }
     private void FixedUpdate()
         {
-            if(m_isTalking){
-                m_Rigidbody2D.velocity = new Vector2(0f,0f);
-            }
+            
 
             if(holding_Weapon){
                 m_weapon.GetComponent<DisplayController>().toggleVisible();
@@ -165,6 +167,7 @@ using System.Collections;
             if ((m_Grounded || m_AirControl) && (!m_isTalking))
             {
                 // Reduce the speed if crouching by the crouchSpeed multiplier
+                Debug.Log("Can control now");
                 move = (crouch ? move*m_CrouchSpeed : move);
 
                 // The Speed animator parameter is set to the absolute value of the horizontal input.
