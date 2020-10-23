@@ -29,12 +29,12 @@ namespace UnityStandardAssets._2D
 
         private void Update()
         {
-            if(!m_Slide)
+            if(!m_Slide && !m_Character.getTalking())
             {
                 //Read the slide input
                 m_Slide=Input.GetKeyDown("c");  
             }
-            if (!m_Jump)
+            if (!m_Jump && !m_Character.getTalking())
             {
                 // Read the jump input in Update so button presses aren't missed.
                 m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");

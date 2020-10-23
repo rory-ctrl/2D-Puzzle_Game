@@ -240,4 +240,8 @@ using System.Collections;
         public void setTalking(bool check){
             m_isTalking = check;
         }
+
+        public bool getTalking(){
+            return m_isTalking;
+        }
     }
