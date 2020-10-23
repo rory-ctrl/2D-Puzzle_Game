@@ -69,7 +69,7 @@ using System.Collections;
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Space) && m_Grounded)
+            if (Input.GetKeyDown(KeyCode.Space) && m_Grounded && !(m_isTalking))
             {
 
                 playerAudio.PlayOneShot(jumpSound, 0.5f);
@@ -156,10 +156,13 @@ using System.Collections;
             }
             
             // Set whether or not the character is crouching in the animator
-            m_Anim.SetBool("Crouch", crouch);
+            if(!m_isTalking){
+                m_Anim.SetBool("Crouch", crouch);
+            }
+            
 
             //only control the player if grounded or airControl is turned on
-            if (m_Grounded || m_AirControl)
+            if ((m_Grounded || m_AirControl) && (!m_isTalking))
             {
                 // Reduce the speed if crouching by the crouchSpeed multiplier
                 move = (crouch ? move*m_CrouchSpeed : move);

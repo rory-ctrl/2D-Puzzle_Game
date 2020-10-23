@@ -16,7 +16,7 @@ public class TriggerButtonWithKey : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return))
          {
-             GetComponent<Button>().onClick.Invoke();
+            GameObject.Find("Continue").GetComponent<Button>().onClick.Invoke();
          }
     }
 }

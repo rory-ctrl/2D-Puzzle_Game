@@ -84,7 +84,9 @@ using UnityEngine.UI;
         }
         public void EndDialogue(){
             animator.SetBool("IsOpen",false);
-            StopCoroutine(cor);
+            if(cor != null){
+                StopCoroutine(cor);  
+            }
             m_beenDismissed = true;
             m_playerScript.setTalking(false);
         }

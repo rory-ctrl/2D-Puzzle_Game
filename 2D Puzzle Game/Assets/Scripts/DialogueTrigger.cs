@@ -8,11 +8,11 @@ public class DialogueTrigger : MonoBehaviour
     private bool hasTriggered = false;
 
     public void TriggerDialogue(){
-        GameValues.score = 0;
         hasTriggered = true;
         if(this.name =="JumpTrigger"){
             GameObject.Find("JumpDialogueManager").GetComponent<DialogueManager>().StartDialogue(dialogue);
         }else if(this.name == "StartTrigger"){
+            GameValues.score = 0;
             GameObject.Find("StartDialogueManager").GetComponent<DialogueManager>().StartDialogue(dialogue);
         }else if(this.name == "SecondLevelTrigger"){
             // Debug.Log("Chat triggered");
