@@ -83,11 +83,12 @@ using System.Collections;
     
      //Function for killing the player, plays the death animation and then waits 2 seconds before reloading the scene
      IEnumerator die(){
+        
         m_Anim.SetBool("death",true);
         yield return new WaitForSeconds(2);
-        //Reloads the scene on death
-        int scene = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(scene, LoadSceneMode.Single);
+        //Reloads the scene on deathd
+        GameValues.setPlayerHealth(100);
+        SceneManager.LoadScene("Room 01", LoadSceneMode.Single);
         GameValues.respawns += 1;
     }
     private void FixedUpdate()

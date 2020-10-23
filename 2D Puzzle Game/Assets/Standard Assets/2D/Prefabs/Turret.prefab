@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8342190681360480390}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8342190681360480409}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -1.01, y: -0.05, z: 0}
+  m_LocalPosition: {x: -4.29, y: 2.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8342190681751559055}
@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 8342190681751559041}
   - component: {fileID: 8342190681751559053}
   - component: {fileID: 8342190681751559052}
+  - component: {fileID: 8424823793200972577}
   m_Layer: 0
   m_Name: Turret
   m_TagString: Enemy
@@ -59,7 +60,7 @@ Transform:
   m_GameObject: {fileID: 8342190681751559040}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.64, y: 5.69, z: 0}
-  m_LocalScale: {x: 1.5314653, y: 1.5531578, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
   - {fileID: 8342190681360480390}
   m_Father: {fileID: 0}
@@ -104,7 +105,7 @@ SpriteRenderer:
   m_SortingLayerID: 1785429357
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 588aa030ec55dda499ef43aeee2877bd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fb03410d3f67c504aa86ae869c8b458c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -128,18 +129,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.6301593}
+  m_Offset: {x: 1.5044253, y: 0.3624549}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 1.28}
+    oldSize: {x: 13.05, y: 8.62}
     newSize: {x: 1.28, y: 1.28}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.28, y: 4.490247}
+  m_Size: {x: 8.135235, y: 7.6542015}
   m_EdgeRadius: 0
 --- !u!114 &8342190681751559053
 MonoBehaviour:
@@ -153,10 +154,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 434dde478a5fbb94bbaf85b80a5cd270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  box: {fileID: 8342190681751559041}
+  animator: {fileID: 8424823793200972577}
   firePoint: {fileID: 8342190681360480390}
   bullet: {fileID: 6290203979887126066, guid: 07471226c28191c4bb5d2cad9950c246, type: 3}
   fireRate: 2
   audioData: {fileID: 8342190681751559052}
+  health: 100
 --- !u!82 &8342190681751559052
 AudioSource:
   m_ObjectHideFlags: 0
@@ -253,3 +257,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &8424823793200972577
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8342190681751559040}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ef9c39fc3acf47144acdb8f2330a8a35, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

@@ -27,7 +27,7 @@ public class Bullet : MonoBehaviour
                  Destroy(gameObject);
                  break;
             case "Enemy":
-                Destroy(target.gameObject);
+                target.gameObject.GetComponent<TurretFire>().TakeDamage(damage);
                 Destroy(gameObject);
                 break;
             case "Player":
