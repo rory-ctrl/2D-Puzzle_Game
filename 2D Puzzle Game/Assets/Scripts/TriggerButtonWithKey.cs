@@ -14,7 +14,7 @@ public class TriggerButtonWithKey : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(KeyCode.Return))
          {
             //  Debug.Log("Button pressed");
             this.GetComponent<Button>().onClick.Invoke();

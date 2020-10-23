@@ -57,6 +57,8 @@ using UnityEngine.UI;
                 return;
             }
             
+            m_playerScript.setTalking(true);
+
             if(characters.Count > 1 ){
                 string character = characters.Dequeue();
                 nameText.text = character;
@@ -82,6 +84,7 @@ using UnityEngine.UI;
             }
             
         }
+        
         public void EndDialogue(){
             animator.SetBool("IsOpen",false);
             if(cor != null){

@@ -15,7 +15,6 @@ public class DialogueTrigger : MonoBehaviour
             GameValues.score = 0;
             GameObject.Find("StartDialogueManager").GetComponent<DialogueManager>().StartDialogue(dialogue);
         }else if(this.name == "SecondLevelTrigger"){
-            // Debug.Log("Chat triggered");
             GameObject.Find("SecondLevelDialogueManager").GetComponent<DialogueManager>().StartDialogue(dialogue);
         }else if(this.name == "DeathDialogueTrigger"){
             if(GameValues.respawns == 1){
@@ -38,9 +37,7 @@ public class DialogueTrigger : MonoBehaviour
         GameObject player = GameObject.Find("TimeAgentPlayer");
 
         if(player!= null && !hasTriggered){
-            // Interact();
             TriggerDialogue();
-            
         }
     }
 
