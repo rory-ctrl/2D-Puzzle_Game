@@ -5,10 +5,11 @@ using UnityEngine.UI;
 
 public class TriggerButtonWithKey : MonoBehaviour
 {
+    private Button myButton;
     // Start is called before the first frame update
     void Start()
     {
-        
+        myButton = gameObject.GetComponent<Button>();
     }
 
     // Update is called once per frame
@@ -17,7 +18,9 @@ public class TriggerButtonWithKey : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(KeyCode.Return))
          {
             //  Debug.Log("Button pressed");
-            this.GetComponent<Button>().onClick.Invoke();
+            if(myButton != null){
+                myButton.onClick.Invoke();
+            }
          }
     }
 }

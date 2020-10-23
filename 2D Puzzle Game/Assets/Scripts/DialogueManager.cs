@@ -17,14 +17,14 @@ using UnityEngine.UI;
         private PlatformerCharacter2D m_playerScript;
 
         private Dialogue m_dialogue;
-        private bool m_beenDismissed;
+        // private bool m_beenDismissed;
 
         // Start is called before the first frame update
         void Start()
         {
             sentences = new Queue<string>();
             characters = new Queue<string>();
-            m_beenDismissed = false;
+            // m_beenDismissed = false;
             m_playerScript = m_player.GetComponent<PlatformerCharacter2D>();
         }
 
@@ -84,13 +84,13 @@ using UnityEngine.UI;
             }
             
         }
-        
+
         public void EndDialogue(){
             animator.SetBool("IsOpen",false);
             if(cor != null){
                 StopCoroutine(cor);  
             }
-            m_beenDismissed = true;
+            // m_beenDismissed = true;
             m_playerScript.setTalking(false);
         }
 
