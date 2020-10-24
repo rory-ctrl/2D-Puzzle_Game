@@ -1510,6 +1510,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5082370707705667066}
+  - component: {fileID: 824706737396243123}
   m_Layer: 5
   m_Name: weaponSlot
   m_TagString: Untagged
@@ -1538,6 +1539,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &824706737396243123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7662998316151448558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07a6d96b181ade94797786d18c8ca263, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7895917497838261000
 GameObject:
   m_ObjectHideFlags: 0
@@ -1547,6 +1560,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3058351006201653487}
+  - component: {fileID: 4364123909050653382}
   m_Layer: 5
   m_Name: bulletSlot
   m_TagString: Untagged
@@ -1575,6 +1589,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4364123909050653382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7895917497838261000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9af7e37c17510a42be244cff3d8788f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8092633587824328888
 GameObject:
   m_ObjectHideFlags: 0
@@ -1735,7 +1761,7 @@ GameObject:
   - component: {fileID: 7953024938757439709}
   - component: {fileID: 3371601097776303930}
   m_Layer: 5
-  m_Name: ItemSlotTemplate
+  m_Name: WeaponType
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -9,6 +9,8 @@ public class GameValues
 
     public static int playerHealth = 100;
 
+    public static bool hasGun {get; set;}
+
     public static void setPlayerHealth(int health){
         playerHealth = health;
     }

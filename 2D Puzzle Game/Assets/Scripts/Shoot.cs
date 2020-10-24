@@ -16,10 +16,8 @@ public class Shoot : MonoBehaviour
         if(Input.GetButtonDown("Fire1")){
             //checks that the weapon is a child of the player before allowing it to be fired.
             if((gameObject.transform.parent!=null)){
-                if(gameObject.transform.parent.tag=="Player"){
-                    fire();
-                    
-                    
+                if(gameObject.transform.parent.tag=="Player" && !GetComponentInParent<PlatformerCharacter2D>().getTalking()){
+                    fire();      
             }
         }
         }

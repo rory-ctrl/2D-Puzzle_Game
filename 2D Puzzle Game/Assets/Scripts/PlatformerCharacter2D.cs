@@ -57,7 +57,7 @@ using System.Collections;
 
             m_currentHealth = GameValues.getPlayerHealth();
             m_currentTime = m_maxTime;
-            m_weapon = GameObject.Find("GunPlaceholder");
+            m_weapon = GameObject.Find("gun");
             
             m_inventory = new Inventory();
         // ui_Inventory.setInventory(m_inventory);
@@ -65,6 +65,11 @@ using System.Collections;
             healthBar.setMaxHealth(m_maxHealth);
             healthBar.setHealth(m_currentHealth);
             timeBar.setMaxTime(m_maxTime);
+
+            if(GameValues.hasGun){
+                Instantiate(m_weapon,this.gameObject.transform.GetChild(3).position,this.gameObject.transform.GetChild(3).rotation).transform.parent = this.gameObject.transform;
+                Destroy(m_weapon);
+            }
         }
 
         private void Update()
@@ -181,7 +186,7 @@ using System.Collections;
             
 
             //only control the player if grounded or airControl is turned on
-            if ((m_Grounded || m_AirControl) && (!m_isTalking))
+            if ((m_Grounded || m_AirControl) && !(m_isTalking))
             {
                 // Reduce the speed if crouching by the crouchSpeed multiplier
                 Debug.Log("Can control now");

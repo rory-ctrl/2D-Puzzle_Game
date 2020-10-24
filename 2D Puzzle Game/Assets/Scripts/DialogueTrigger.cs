@@ -46,7 +46,7 @@ public class DialogueTrigger : MonoBehaviour
         GameObject player = GameObject.Find("TimeAgentPlayer");
 
         if(player!= null){
-            // Debug.Log("left");
+            Debug.Log("left");
             FindObjectOfType<DialogueManager>().EndDialogue();
         }
     }

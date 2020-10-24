@@ -8,6 +8,7 @@ using UnityEngine.UI;
     {
 
         public Animator animator;
+        public TriggerButtonWithKey attachedButton;
         public Text nameText;
         public Text dialogueText;
         public GameObject m_player;
@@ -29,6 +30,7 @@ using UnityEngine.UI;
         }
 
         public void StartDialogue(Dialogue dialogue){
+                attachedButton.setActive(true);
                 m_dialogue = dialogue;
                 m_playerScript.setTalking(true);
                 animator.SetBool("IsOpen",true);
@@ -45,6 +47,7 @@ using UnityEngine.UI;
                     characters.Enqueue(character);
                 }
                 
+                Debug.Log(sentences.Count);
                 DisplayNextSentence();
             
         }
@@ -89,6 +92,7 @@ using UnityEngine.UI;
 
         public void EndDialogue(){
             animator.SetBool("IsOpen",false);
+            attachedButton.setActive(false);
             if(cor != null){
                 StopCoroutine(cor);  
                 Debug.Log("finished");

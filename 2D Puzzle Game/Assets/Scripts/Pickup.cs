@@ -13,7 +13,7 @@ public class Pickup : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Debug.Log(this.gameObject.name);
     }
 
     
@@ -29,6 +29,7 @@ public class Pickup : MonoBehaviour
                      }
                 //Places a copy of the item being picked up as a child of the player
                Instantiate(item,WeaponPoint.position,WeaponPoint.rotation).transform.parent=gameObject.transform;
+               GameValues.hasGun = true;
                }
                //Destroys the item the player picked up
            Destroy(item);
