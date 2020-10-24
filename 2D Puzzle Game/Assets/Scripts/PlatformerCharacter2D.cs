@@ -34,7 +34,7 @@ using System.Collections;
         public int m_maxHealth = 100;
         public int m_maxTime = 100;
         public int m_currentHealth;
-        public int m_currentTime;
+        public float m_currentTime;
         private Inventory m_inventory;
         // [SerializeField] private UI_Inventory ui_Inventory;
         public AudioClip jumpSound;
@@ -69,6 +69,8 @@ using System.Collections;
 
         private void Update()
         {
+            
+
             if (Input.GetKeyDown(KeyCode.Space) && m_Grounded && !(m_isTalking))
             {
 
@@ -79,7 +81,21 @@ using System.Collections;
             if(m_isTalking){
                 m_Rigidbody2D.velocity = new Vector2(0f,0f);
             }
+
+            if (m_currentTime > 0 && Input.GetKey(KeyCode.Q))
+            {
+                Time.timeScale = 0.5f;
+                UseTime(0.1f);
+            }
+
+            if (Input.GetKeyUp(KeyCode.Q))
+            {
+                Time.timeScale = 1f;
+                timeBar.setMaxTime(m_maxTime);
+                m_currentTime = m_maxTime;
+
         }
+    }
     
      //Function for killing the player, plays the death animation and then waits 2 seconds before reloading the scene
      IEnumerator die(){
@@ -235,9 +251,8 @@ using System.Collections;
             }
         }
 
-        private void UseTime(int time){
+        private void UseTime(float time){
             m_currentTime -= time;
-
             timeBar.setTime(m_currentTime);
         }
         

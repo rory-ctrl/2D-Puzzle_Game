@@ -9,7 +9,7 @@ public class TimeBar : MonoBehaviour
     public Slider slider;
     public Gradient gradient;
     public Image fill;
-    public void setTime(int time){
+    public void setTime(float time){
         slider.value = time;
 
         fill.color = gradient.Evaluate(slider.normalizedValue);
