@@ -770,7 +770,7 @@ PrefabInstance:
     - target: {fileID: 152312122296122124, guid: 5e5bd3013edeaef4ebeccf30650bfd13,
         type: 3}
       propertyPath: LevelName
-      value: Room 05
+      value: Room 07
       objectReference: {fileID: 0}
     - target: {fileID: 1788007764589847169, guid: 5e5bd3013edeaef4ebeccf30650bfd13,
         type: 3}
@@ -11491,6 +11491,11 @@ PrefabInstance:
       propertyPath: m_TileMatrixArray.Array.data[1].m_Data.e11
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 8811308977490846491, guid: 1378ebc58241ca74c928cfceab7d4c6d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     - target: {fileID: 8811308978613885057, guid: 1378ebc58241ca74c928cfceab7d4c6d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11550,6 +11555,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Grid (Tiles)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8811308978613885059, guid: 1378ebc58241ca74c928cfceab7d4c6d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Terrain
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1378ebc58241ca74c928cfceab7d4c6d, type: 3}
