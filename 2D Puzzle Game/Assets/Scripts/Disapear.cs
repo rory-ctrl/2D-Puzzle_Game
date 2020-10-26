@@ -30,11 +30,11 @@ public class Disapear : MonoBehaviour
         else{
             //Hides Platform on interval of time
             if(isActive==false){
-                obj.GetComponent<BoxCollider2D>().enabled=true;
+                obj.GetComponent<BoxCollider2D>().enabled=false;
                 obj.GetComponent<SpriteRenderer>().color=clear;
             }
             else{
-                obj.GetComponent<BoxCollider2D>().enabled=false;
+                obj.GetComponent<BoxCollider2D>().enabled=true;
                 obj.GetComponent<SpriteRenderer>().color=solid;
             }
             isActive=!isActive;
