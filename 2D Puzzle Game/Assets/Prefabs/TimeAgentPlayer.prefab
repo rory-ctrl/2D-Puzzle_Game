@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 1843591802156423793}
   - component: {fileID: 5080021190115124299}
   m_Layer: 8
-  m_Name: TimeAgentPlayer_New
+  m_Name: TimeAgentPlayer
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
