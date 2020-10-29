@@ -8,23 +8,39 @@ public class DialogueTrigger : MonoBehaviour
     private bool hasTriggered = false;
 
     public void TriggerDialogue(){
-        hasTriggered = true;
+        
         if(this.name =="JumpTrigger"){
+            hasTriggered = true;
             GameObject.Find("JumpDialogueManager").GetComponent<DialogueManager>().StartDialogue(dialogue);
         }else if(this.name == "StartTrigger"){
             GameValues.score = 0;
+            GameValues.respawns = 0;
+            hasTriggered = true;
             GameObject.Find("StartDialogueManager").GetComponent<DialogueManager>().StartDialogue(dialogue);
         }else if(this.name == "SecondLevelTrigger"){
+            hasTriggered = true;
             GameObject.Find("SecondLevelDialogueManager").GetComponent<DialogueManager>().StartDialogue(dialogue);
         }else if(this.name == "DeathDialogueTrigger"){
-            if(GameValues.respawns == 1){
+            Debug.Log(GameValues.respawns);
+            if(GameValues.respawns >= 1){
+                hasTriggered = true;
                 GameObject.Find("DeathDialogueManager").GetComponent<DialogueManager>().StartDialogue(dialogue);
             }
         }else if(this.name == "CrouchDialogueTrigger"){
+            hasTriggered = true;
             GameObject.Find("CrouchDialogueManager").GetComponent<DialogueManager>().StartDialogue(dialogue);
         }
         else if(this.name == "CrouchHelpDialogueTrigger"){
+            hasTriggered = true;
             GameObject.Find("CrouchDialogueManager").GetComponent<DialogueManager>().StartDialogue(dialogue);
+        }
+        else if(this.name == "DragonDialogueTrigger"){
+            hasTriggered = true;
+            GameObject.Find("DragonDialogueManager").GetComponent<DialogueManager>().StartDialogue(dialogue);
+        }
+        else if(this.name == "SuitDialogueTrigger"){
+            hasTriggered = true;
+            GameObject.Find("SuitDialogueManager").GetComponent<DialogueManager>().StartDialogue(dialogue);
         }
         
     }

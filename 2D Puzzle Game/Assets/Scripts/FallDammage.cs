@@ -15,6 +15,7 @@ public class FallDammage : MonoBehaviour
         switch(target.tag){
             case "Player":
                 target.gameObject.GetComponent<PlatformerCharacter2D>().TakeDamage(damage);
+                GameValues.respawns +=1;
                  target.gameObject.transform.position=startposition.transform.position;
                 break;
             default:
