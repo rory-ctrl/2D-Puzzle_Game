@@ -8,6 +8,8 @@ TagManager:
   - Weapon
   - Terrain
   - Enemy
+  - Button
+  - TimeSuit
   layers:
   - Default
   - TransparentFX

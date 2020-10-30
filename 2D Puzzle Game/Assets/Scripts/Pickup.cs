@@ -21,6 +21,9 @@ public class Pickup : MonoBehaviour
     {
         if(Input.GetKeyDown("e")){
            if(item!=null){
+               if(item.tag=="TimeSuit"){Destroy(item);}
+               else if(item.tag=="Button"){Destroy(item);}
+        else{
                //Places a copy of the currently held wepaon on the ground before deleteing it from the player
                foreach (Transform child in transform)
                     {
@@ -33,7 +36,9 @@ public class Pickup : MonoBehaviour
                }
                //Destroys the item the player picked up
            Destroy(item);
+           }
         }
+        
     }
 
     //If the object being collided with is tagged as a weapon it is stored in a game object
@@ -41,6 +46,14 @@ public class Pickup : MonoBehaviour
     void OnTriggerEnter2D(Collider2D target){
         if(target.tag=="Weapon"){
            item=target.gameObject;
+        }
+        if(target.tag=="Button")
+        {
+            item=target.gameObject;
+        }
+        if(target.tag=="TimeSuit")
+        {
+            item=target.gameObject;
         }
     }
     //Removes the game object from the variable so the player cannot pickup items when they are not in range
