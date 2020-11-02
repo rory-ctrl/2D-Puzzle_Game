@@ -10,6 +10,7 @@ TagManager:
   - Enemy
   - Button
   - TimeSuit
+  - Music
   layers:
   - Default
   - TransparentFX

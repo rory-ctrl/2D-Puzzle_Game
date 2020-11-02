@@ -79,7 +79,7 @@ using System.Collections;
             if (Input.GetKeyDown(KeyCode.Space) && m_Grounded && !(m_isTalking))
             {
 
-                playerAudio.PlayOneShot(jumpSound, 0.5f);
+                playerAudio.PlayOneShot(jumpSound, 1f);
 
             }
 
