@@ -39,15 +39,11 @@ using UnityEngine.UI;
                 characters.Clear();
                 // m_player.GetComponent<PlatformerCharacter2D>
 
-                foreach(string sentence in m_dialogue.sentences){
-                    sentences.Enqueue(sentence);
-                }
-
-                foreach(string character in m_dialogue.names){
-                    characters.Enqueue(character);
+                foreach(Sentence m_sentence in m_dialogue.sentences){
+                    sentences.Enqueue(m_sentence.sentence);
+                    characters.Enqueue(m_sentence.name);
                 }
                 
-                Debug.Log(sentences.Count);
                 DisplayNextSentence();
             
         }
@@ -60,18 +56,8 @@ using UnityEngine.UI;
                 return;
             }
             
-            
-
-            if(characters.Count > 1 ){
-                string character = characters.Dequeue();
-                nameText.text = character;
-            }
-
-            if(sentences.Count < 2){
-                if(characters.Count > 0){
-                    nameText.text = characters.Dequeue();
-                }
-            }        
+            string character = characters.Dequeue();
+            nameText.text = character;       
 
             string sentence = sentences.Dequeue();
             if(cor != null){
@@ -85,7 +71,7 @@ using UnityEngine.UI;
             dialogueText.text = "";
             foreach(char letter in sentence.ToCharArray()){
                 dialogueText.text +=letter;
-                yield return new WaitForSeconds(0.04f);
+                yield return new WaitForSeconds(0.06f);
             }
             
         }
