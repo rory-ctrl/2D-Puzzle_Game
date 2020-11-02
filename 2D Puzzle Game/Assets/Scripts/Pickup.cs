@@ -21,7 +21,11 @@ public class Pickup : MonoBehaviour
     {
         if(Input.GetKeyDown("e")){
            if(item!=null){
-               if(item.tag=="TimeSuit"){Destroy(item);}
+               if(item.tag=="TimeSuit"){
+                    Destroy(item);
+                    Instantiate(GameObject.Find("gun"),WeaponPoint.position,WeaponPoint.rotation).transform.parent=gameObject.transform;
+                    GameValues.hasGun=true;
+                }
                else if(item.tag=="Button"){Destroy(item);}
         else{
                //Places a copy of the currently held wepaon on the ground before deleteing it from the player
