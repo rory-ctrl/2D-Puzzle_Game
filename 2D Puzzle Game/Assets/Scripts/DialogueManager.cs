@@ -8,6 +8,7 @@ using UnityEngine.UI;
     {
 
         public Animator animator;
+        public Animator enemyAnim;
         public TriggerButtonWithKey attachedButton;
         public Text nameText;
         public Text dialogueText;
@@ -78,6 +79,7 @@ using UnityEngine.UI;
 
         public void EndDialogue(){
             animator.SetBool("IsOpen",false);
+            enemyAnim.SetBool("ConvoDone", true);
             attachedButton.setActive(false);
             if(cor != null){
                 StopCoroutine(cor);  

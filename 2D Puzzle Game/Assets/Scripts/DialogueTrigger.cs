@@ -21,7 +21,7 @@ public class DialogueTrigger : MonoBehaviour
             hasTriggered = true;
             GameObject.Find("SecondLevelDialogueManager").GetComponent<DialogueManager>().StartDialogue(dialogue);
         }else if(this.name == "DeathDialogueTrigger"){
-            Debug.Log(GameValues.respawns);
+            // Debug.Log(GameValues.respawns);
             if(GameValues.respawns >= 1){
                 hasTriggered = true;
                 GameObject.Find("DeathDialogueManager").GetComponent<DialogueManager>().StartDialogue(dialogue);
@@ -46,6 +46,10 @@ public class DialogueTrigger : MonoBehaviour
             hasTriggered = true;
             GameObject.Find("SuitDialogueManager").GetComponent<DialogueManager>().StartDialogue(dialogue);
         }
+        else if(this.name == "AntagonistDialogueTrigger"){
+            hasTriggered = true;
+            GameObject.Find("DragonDialogueManager").GetComponent<DialogueManager>().StartDialogue(dialogue);
+        }
         
     }
 
@@ -66,7 +70,7 @@ public class DialogueTrigger : MonoBehaviour
         GameObject player = GameObject.Find("TimeAgentPlayer");
 
         if(player!= null){
-            Debug.Log("left");
+            // Debug.Log("left");
             FindObjectOfType<DialogueManager>().EndDialogue();
         }
     }

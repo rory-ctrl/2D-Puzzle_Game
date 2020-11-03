@@ -124,7 +124,7 @@ using System.Collections;
             if(m_Anim.GetCurrentAnimatorStateInfo(0).IsName("Slide")){
                 m_Collider.enabled=false;
                 //m_Collider.size=new Vector2(1,2);
-                 Debug.Log("Current BoxCollider Size : " + m_Collider.size);
+                //  Debug.Log("Current BoxCollider Size : " + m_Collider.size);
             }
             if(m_Anim.GetCurrentAnimatorStateInfo(0).IsName("Crouch")||m_Anim.GetCurrentAnimatorStateInfo(0).IsName("CrouchingWalk")){
                 //m_Collider.enabled=false;
@@ -189,7 +189,7 @@ using System.Collections;
             if ((m_Grounded || m_AirControl) && !(m_isTalking))
             {
                 // Reduce the speed if crouching by the crouchSpeed multiplier
-                Debug.Log("Can control now");
+                // Debug.Log("Can control now");
                 move = (crouch ? move*m_CrouchSpeed : move);
 
                 // The Speed animator parameter is set to the absolute value of the horizontal input.
