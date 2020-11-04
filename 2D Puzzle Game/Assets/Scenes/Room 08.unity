@@ -309,17 +309,19 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogue.sentences.Array.data[1].sentence
       value: Hold the "Q" button to use the TimeSuit's slowmo ability. All of time
-        will slow down around you.
+        will slow down around you. As the ability is active you burn through your
+        TimeJuice.
       objectReference: {fileID: 0}
     - target: {fileID: 6287523744026529343, guid: ce1cf45fa36ceb74aa0d496fadb18271,
         type: 3}
       propertyPath: dialogue.sentences.Array.data[2].name
-      value: CONTROLS
+      value: HINT
       objectReference: {fileID: 0}
     - target: {fileID: 6287523744026529343, guid: ce1cf45fa36ceb74aa0d496fadb18271,
         type: 3}
       propertyPath: dialogue.sentences.Array.data[2].sentence
-      value: It might make it easier to make those jumps!
+      value: It might make it easier to make those jumps! But be careful, the TimeJuice
+        doesn't regenerate very quickly so use it wisely!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce1cf45fa36ceb74aa0d496fadb18271, type: 3}
@@ -644,12 +646,12 @@ PrefabInstance:
     - target: {fileID: 3098857700436333873, guid: 99b0f9e077518b240a76d3bfd08549c7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.3217025
+      value: 96.24
       objectReference: {fileID: 0}
     - target: {fileID: 3098857700436333873, guid: 99b0f9e077518b240a76d3bfd08549c7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.1366022
+      value: 464.64
       objectReference: {fileID: 0}
     - target: {fileID: 3098857700436333873, guid: 99b0f9e077518b240a76d3bfd08549c7,
         type: 3}

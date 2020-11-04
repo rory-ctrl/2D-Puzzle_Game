@@ -64,6 +64,10 @@ public class DialogueTrigger : MonoBehaviour
             hasTriggered = true;
             GameObject.Find("RepeatDialogueManager").GetComponent<DialogueManager>().StartDialogue(dialogue);
         }
+        else if(this.name == "TiredDialogueTrigger"){
+            hasTriggered = true;
+            GameObject.Find("TiredDialogueManager").GetComponent<DialogueManager>().StartDialogue(dialogue);
+        }
         
     }
 

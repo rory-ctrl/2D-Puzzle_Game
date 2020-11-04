@@ -33,6 +33,7 @@ using System.Collections;
         private int m_crystals;
         public int m_maxHealth = 100;
         public int m_maxTime = 100;
+        private float m_timeRecovery = 0.01f;
         public int m_currentHealth;
         public float m_currentTime;
         private Inventory m_inventory;
@@ -56,7 +57,7 @@ using System.Collections;
             
 
             m_currentHealth = GameValues.getPlayerHealth();
-            m_currentTime = m_maxTime;
+            m_currentTime = GameValues.getPlayerTime();
             m_weapon = GameObject.Find("gun");
             
             m_inventory = new Inventory();
@@ -87,20 +88,22 @@ using System.Collections;
                 m_Rigidbody2D.velocity = new Vector2(0f,0f);
             }
 
-            if (m_currentTime > 0 && Input.GetKey(KeyCode.Q))
+            if (m_currentTime > 0 && Input.GetKey(KeyCode.Q) && GameValues.hasGun)
             {
                 Time.timeScale = 0.5f;
-                UseTime(0.1f);
+                UseTime(0.05f);
             }
 
             if (Input.GetKeyUp(KeyCode.Q))
             {
                 Time.timeScale = 1f;
-                timeBar.setMaxTime(m_maxTime);
-                m_currentTime = m_maxTime;
-
-        }
-    }
+                // timeBar.setMaxTime(m_maxTime);
+                
+            }
+            if((m_currentTime < m_maxTime) && !(Input.GetKey(KeyCode.Q))){
+                regenerateTime();
+            }
+      }
     
      //Function for killing the player, plays the death animation and then waits 2 seconds before reloading the scene
      IEnumerator die(){
@@ -164,6 +167,7 @@ using System.Collections;
             }
 
             GameValues.setPlayerHealth(m_currentHealth);
+            GameValues.setPlayerTime(m_currentTime);
         }
 
 
@@ -258,6 +262,11 @@ using System.Collections;
 
         private void UseTime(float time){
             m_currentTime -= time;
+            timeBar.setTime(m_currentTime);
+        }
+
+        private void regenerateTime(){
+            m_currentTime += m_timeRecovery;
             timeBar.setTime(m_currentTime);
         }
         
