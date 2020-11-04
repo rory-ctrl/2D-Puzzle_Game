@@ -190,6 +190,131 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76d795ef12bdacc4793b9b04b7b7d884, type: 3}
+--- !u!1001 &265644734
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6287523744026529336, guid: ce1cf45fa36ceb74aa0d496fadb18271,
+        type: 3}
+      propertyPath: m_EdgeRadius
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287523744026529337, guid: ce1cf45fa36ceb74aa0d496fadb18271,
+        type: 3}
+      propertyPath: m_Name
+      value: GapDialogueTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287523744026529342, guid: ce1cf45fa36ceb74aa0d496fadb18271,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.73
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287523744026529342, guid: ce1cf45fa36ceb74aa0d496fadb18271,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287523744026529342, guid: ce1cf45fa36ceb74aa0d496fadb18271,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287523744026529342, guid: ce1cf45fa36ceb74aa0d496fadb18271,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287523744026529342, guid: ce1cf45fa36ceb74aa0d496fadb18271,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287523744026529342, guid: ce1cf45fa36ceb74aa0d496fadb18271,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287523744026529342, guid: ce1cf45fa36ceb74aa0d496fadb18271,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287523744026529342, guid: ce1cf45fa36ceb74aa0d496fadb18271,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287523744026529342, guid: ce1cf45fa36ceb74aa0d496fadb18271,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287523744026529342, guid: ce1cf45fa36ceb74aa0d496fadb18271,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287523744026529342, guid: ce1cf45fa36ceb74aa0d496fadb18271,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287523744026529342, guid: ce1cf45fa36ceb74aa0d496fadb18271,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287523744026529342, guid: ce1cf45fa36ceb74aa0d496fadb18271,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287523744026529343, guid: ce1cf45fa36ceb74aa0d496fadb18271,
+        type: 3}
+      propertyPath: dialogue.names.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287523744026529343, guid: ce1cf45fa36ceb74aa0d496fadb18271,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287523744026529343, guid: ce1cf45fa36ceb74aa0d496fadb18271,
+        type: 3}
+      propertyPath: dialogue.names.Array.data[0]
+      value: Agent Smith
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287523744026529343, guid: ce1cf45fa36ceb74aa0d496fadb18271,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: Ouch! I should probably avoid doing that again.........
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287523744026529343, guid: ce1cf45fa36ceb74aa0d496fadb18271,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[0].name
+      value: Agent Smith
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287523744026529343, guid: ce1cf45fa36ceb74aa0d496fadb18271,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[0].sentence
+      value: What's with these gaps?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287523744026529343, guid: ce1cf45fa36ceb74aa0d496fadb18271,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[1].name
+      value: HINT
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287523744026529343, guid: ce1cf45fa36ceb74aa0d496fadb18271,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[1].sentence
+      value: Make sure you hold the jump button to make it over these very large
+        gaps!
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ce1cf45fa36ceb74aa0d496fadb18271, type: 3}
 --- !u!1 &298831644
 GameObject:
   m_ObjectHideFlags: 0

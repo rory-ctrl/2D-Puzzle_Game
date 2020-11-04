@@ -78,12 +78,20 @@ using UnityEngine.UI;
         }
 
         public void EndDialogue(){
+
             animator.SetBool("IsOpen",false);
-            enemyAnim.SetBool("ConvoDone", true);
+
+            if(enemyAnim != null){
+                enemyAnim.SetBool("ConvoDone", true);
+            }
+            
             attachedButton.setActive(false);
             if(cor != null){
                 StopCoroutine(cor);  
-                Debug.Log("finished");
+            }
+
+            if(this.gameObject.name == "AntagonistDialogueManager"){
+                GameValues.score -= 1;
             }
             // m_beenDismissed = true;
             m_playerScript.setTalking(false);

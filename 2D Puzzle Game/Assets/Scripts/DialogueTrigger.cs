@@ -26,7 +26,13 @@ public class DialogueTrigger : MonoBehaviour
                 hasTriggered = true;
                 GameObject.Find("DeathDialogueManager").GetComponent<DialogueManager>().StartDialogue(dialogue);
             }
-        }else if(this.name == "CrouchDialogueTrigger"){
+
+        }
+        else if(this.name == "GapDialogueTrigger"){
+            hasTriggered = true;
+            GameObject.Find("DeathDialogueManager").GetComponent<DialogueManager>().StartDialogue(dialogue);
+        }
+        else if(this.name == "CrouchDialogueTrigger"){
             hasTriggered = true;
             GameObject.Find("CrouchDialogueManager").GetComponent<DialogueManager>().StartDialogue(dialogue);
         }
@@ -48,7 +54,15 @@ public class DialogueTrigger : MonoBehaviour
         }
         else if(this.name == "AntagonistDialogueTrigger"){
             hasTriggered = true;
-            GameObject.Find("DragonDialogueManager").GetComponent<DialogueManager>().StartDialogue(dialogue);
+            GameObject.Find("AntagonistDialogueManager").GetComponent<DialogueManager>().StartDialogue(dialogue);
+        }
+        else if(this.name == "RepeatDialogueTrigger"){
+            hasTriggered = true;
+            GameObject.Find("RepeatDialogueManager").GetComponent<DialogueManager>().StartDialogue(dialogue);
+        }
+        else if(this.name == "NopeDialogueTrigger"){
+            hasTriggered = true;
+            GameObject.Find("RepeatDialogueManager").GetComponent<DialogueManager>().StartDialogue(dialogue);
         }
         
     }

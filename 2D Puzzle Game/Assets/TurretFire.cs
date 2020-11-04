@@ -14,6 +14,7 @@ public class TurretFire : MonoBehaviour
     public int health=100;
     // Update is called once per frame\
     private bool dead=false;
+    private bool shouldFire = false;
     public void TakeDamage(int dmg)
     {
         health=health-dmg;
@@ -26,7 +27,10 @@ public class TurretFire : MonoBehaviour
     
     void Update()
     {
-        fire();
+        if(shouldFire){
+           fire(); 
+        }
+        
     }
     void fire()
     {
@@ -39,5 +43,21 @@ public class TurretFire : MonoBehaviour
          audioData.Play(0);
      }
     }
+    }
+
+    void OnTriggerEnter2D(Collider2D trigger){
+        GameObject player = GameObject.Find("TimeAgentPlayer");
+
+        if(player!= null){
+            shouldFire = true;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D trigger){
+        GameObject player = GameObject.Find("TimeAgentPlayer");
+
+        if(player!= null){
+            shouldFire = false;
+        }
     }
 }

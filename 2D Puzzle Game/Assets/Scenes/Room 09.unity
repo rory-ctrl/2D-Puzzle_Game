@@ -353,7 +353,7 @@ PrefabInstance:
     - target: {fileID: 6287523744026529342, guid: ce1cf45fa36ceb74aa0d496fadb18271,
         type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 6287523744026529342, guid: ce1cf45fa36ceb74aa0d496fadb18271,
         type: 3}
@@ -878,6 +878,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6287523744026529336, guid: ce1cf45fa36ceb74aa0d496fadb18271,
+        type: 3}
+      propertyPath: m_EdgeRadius
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 6287523744026529337, guid: ce1cf45fa36ceb74aa0d496fadb18271,
         type: 3}
       propertyPath: m_Name
@@ -938,6 +943,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6287523744026529342, guid: ce1cf45fa36ceb74aa0d496fadb18271,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6287523744026529343, guid: ce1cf45fa36ceb74aa0d496fadb18271,
         type: 3}
       propertyPath: dialogue.names.Array.size
@@ -946,7 +956,7 @@ PrefabInstance:
     - target: {fileID: 6287523744026529343, guid: ce1cf45fa36ceb74aa0d496fadb18271,
         type: 3}
       propertyPath: dialogue.sentences.Array.size
-      value: 5
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6287523744026529343, guid: ce1cf45fa36ceb74aa0d496fadb18271,
         type: 3}
@@ -984,6 +994,101 @@ PrefabInstance:
       propertyPath: dialogue.sentences.Array.data[4]
       value: I'm not a Dinosaur plushy, I'm a Time-O-Saur, the most powerful time
         being in the universe.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287523744026529343, guid: ce1cf45fa36ceb74aa0d496fadb18271,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[0].name
+      value: Plush Toy????
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287523744026529343, guid: ce1cf45fa36ceb74aa0d496fadb18271,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[0].sentence
+      value: WOAH! WAIT RIGHT THERE!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287523744026529343, guid: ce1cf45fa36ceb74aa0d496fadb18271,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[1].name
+      value: Agent Smith
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287523744026529343, guid: ce1cf45fa36ceb74aa0d496fadb18271,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[1].sentence
+      value: Did the plush dragon toy just talk to me?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287523744026529343, guid: ce1cf45fa36ceb74aa0d496fadb18271,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[2].name
+      value: Plush Toy
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287523744026529343, guid: ce1cf45fa36ceb74aa0d496fadb18271,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[2].sentence
+      value: I'm not a plush toy, I'm a Time-O-Saur! A respected and revered creature
+        of Time!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287523744026529343, guid: ce1cf45fa36ceb74aa0d496fadb18271,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[3].name
+      value: Agent Smith
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287523744026529343, guid: ce1cf45fa36ceb74aa0d496fadb18271,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[3].sentence
+      value: Oh I'm sorry.                                                              
+        Well I would love to stay and chat but I really have to stop that other guy
+        that just came through here!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287523744026529343, guid: ce1cf45fa36ceb74aa0d496fadb18271,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[4].name
+      value: Time-O-Saur
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287523744026529343, guid: ce1cf45fa36ceb74aa0d496fadb18271,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[4].sentence
+      value: How are you going to follow him? He closed the portal behind him and
+        your suit can't open portals.           Yet.........
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287523744026529343, guid: ce1cf45fa36ceb74aa0d496fadb18271,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[5].name
+      value: Agent Smith
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287523744026529343, guid: ce1cf45fa36ceb74aa0d496fadb18271,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[5].sentence
+      value: I.......... Don't...............Know...............
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287523744026529343, guid: ce1cf45fa36ceb74aa0d496fadb18271,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[6].name
+      value: Time-O-Saur
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287523744026529343, guid: ce1cf45fa36ceb74aa0d496fadb18271,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[6].sentence
+      value: Tell you what. If you give me one of those yummy Time Crystal Shards
+        I'll open it for you.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287523744026529343, guid: ce1cf45fa36ceb74aa0d496fadb18271,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[7].name
+      value: Agent Smith
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287523744026529343, guid: ce1cf45fa36ceb74aa0d496fadb18271,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[7].sentence
+      value: Deal!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287523744026529343, guid: ce1cf45fa36ceb74aa0d496fadb18271,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[8].name
+      value: Time-O-Saur
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287523744026529343, guid: ce1cf45fa36ceb74aa0d496fadb18271,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[8].sentence
+      value: Have fun out there! I'm sure we will meet again soon......
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce1cf45fa36ceb74aa0d496fadb18271, type: 3}
@@ -1204,7 +1309,7 @@ PrefabInstance:
         type: 3}
       propertyPath: enemyAnim
       value: 
-      objectReference: {fileID: 130761921}
+      objectReference: {fileID: 0}
     - target: {fileID: 8892269713549453302, guid: 3d4c7149b246a834fb2f73f8c08ccabb,
         type: 3}
       propertyPath: m_Name
@@ -11523,6 +11628,244 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76d795ef12bdacc4793b9b04b7b7d884, type: 3}
+--- !u!1001 &1736735960
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1267043359451434450, guid: 3d4c7149b246a834fb2f73f8c08ccabb,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1736735961}
+    - target: {fileID: 1267043359451434450, guid: 3d4c7149b246a834fb2f73f8c08ccabb,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DisplayNextSentence
+      objectReference: {fileID: 0}
+    - target: {fileID: 2829312163354136715, guid: 3d4c7149b246a834fb2f73f8c08ccabb,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1736735961}
+    - target: {fileID: 2829312163354136715, guid: 3d4c7149b246a834fb2f73f8c08ccabb,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DisplayNextSentence
+      objectReference: {fileID: 0}
+    - target: {fileID: 2829312164309050024, guid: 3d4c7149b246a834fb2f73f8c08ccabb,
+        type: 3}
+      propertyPath: m_Name
+      value: AntagonistDialogueBox
+      objectReference: {fileID: 0}
+    - target: {fileID: 8892269713549453065, guid: 3d4c7149b246a834fb2f73f8c08ccabb,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1736735965}
+    - target: {fileID: 8892269713549453065, guid: 3d4c7149b246a834fb2f73f8c08ccabb,
+        type: 3}
+      propertyPath: attachedButton
+      value: 
+      objectReference: {fileID: 1736735964}
+    - target: {fileID: 8892269713549453065, guid: 3d4c7149b246a834fb2f73f8c08ccabb,
+        type: 3}
+      propertyPath: nameText
+      value: 
+      objectReference: {fileID: 1736735963}
+    - target: {fileID: 8892269713549453065, guid: 3d4c7149b246a834fb2f73f8c08ccabb,
+        type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 1736735962}
+    - target: {fileID: 8892269713549453065, guid: 3d4c7149b246a834fb2f73f8c08ccabb,
+        type: 3}
+      propertyPath: m_player
+      value: 
+      objectReference: {fileID: 192262193}
+    - target: {fileID: 8892269713549453065, guid: 3d4c7149b246a834fb2f73f8c08ccabb,
+        type: 3}
+      propertyPath: enemyAnim
+      value: 
+      objectReference: {fileID: 130761921}
+    - target: {fileID: 8892269713549453302, guid: 3d4c7149b246a834fb2f73f8c08ccabb,
+        type: 3}
+      propertyPath: m_Name
+      value: AntagonistDialogueManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907774943916204536, guid: 3d4c7149b246a834fb2f73f8c08ccabb,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1661074638}
+    - target: {fileID: 8907774943916204539, guid: 3d4c7149b246a834fb2f73f8c08ccabb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907774943916204539, guid: 3d4c7149b246a834fb2f73f8c08ccabb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907774943916204539, guid: 3d4c7149b246a834fb2f73f8c08ccabb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907774943916204539, guid: 3d4c7149b246a834fb2f73f8c08ccabb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907774943916204539, guid: 3d4c7149b246a834fb2f73f8c08ccabb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907774943916204539, guid: 3d4c7149b246a834fb2f73f8c08ccabb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907774943916204539, guid: 3d4c7149b246a834fb2f73f8c08ccabb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907774943916204539, guid: 3d4c7149b246a834fb2f73f8c08ccabb,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907774943916204539, guid: 3d4c7149b246a834fb2f73f8c08ccabb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907774943916204539, guid: 3d4c7149b246a834fb2f73f8c08ccabb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907774943916204539, guid: 3d4c7149b246a834fb2f73f8c08ccabb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907774943916204539, guid: 3d4c7149b246a834fb2f73f8c08ccabb,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907774943916204539, guid: 3d4c7149b246a834fb2f73f8c08ccabb,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907774943916204539, guid: 3d4c7149b246a834fb2f73f8c08ccabb,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907774943916204539, guid: 3d4c7149b246a834fb2f73f8c08ccabb,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907774943916204539, guid: 3d4c7149b246a834fb2f73f8c08ccabb,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907774943916204539, guid: 3d4c7149b246a834fb2f73f8c08ccabb,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907774943916204539, guid: 3d4c7149b246a834fb2f73f8c08ccabb,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907774943916204539, guid: 3d4c7149b246a834fb2f73f8c08ccabb,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907774943916204539, guid: 3d4c7149b246a834fb2f73f8c08ccabb,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907774943916204539, guid: 3d4c7149b246a834fb2f73f8c08ccabb,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907774943916204543, guid: 3d4c7149b246a834fb2f73f8c08ccabb,
+        type: 3}
+      propertyPath: m_Name
+      value: AnatagonistDialogueCanvas
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3d4c7149b246a834fb2f73f8c08ccabb, type: 3}
+--- !u!114 &1736735961 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8892269713549453065, guid: 3d4c7149b246a834fb2f73f8c08ccabb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1736735960}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d4337f8b00228542a968f206a8f6a28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1736735962 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2829312164113715694, guid: 3d4c7149b246a834fb2f73f8c08ccabb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1736735960}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1736735963 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2829312164331302197, guid: 3d4c7149b246a834fb2f73f8c08ccabb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1736735960}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1736735964 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2075513390706567381, guid: 3d4c7149b246a834fb2f73f8c08ccabb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1736735960}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc1351d9beac8e64e98602c1aa9c19c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &1736735965 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2829312164309050028, guid: 3d4c7149b246a834fb2f73f8c08ccabb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1736735960}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2115121957
 GameObject:
   m_ObjectHideFlags: 0
@@ -11534,6 +11877,8 @@ GameObject:
   - component: {fileID: 2115121959}
   - component: {fileID: 2115121958}
   - component: {fileID: 2115121960}
+  - component: {fileID: 2115121961}
+  - component: {fileID: 2115121962}
   m_Layer: 0
   m_Name: Portal
   m_TagString: Untagged
@@ -11624,3 +11969,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &2115121961
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115121957}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 3, y: 7.81}
+  m_Direction: 0
+--- !u!114 &2115121962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115121957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42c83e06d7a60184ea7d2d54276bcd40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LevelName: Credits

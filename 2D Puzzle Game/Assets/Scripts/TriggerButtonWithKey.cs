@@ -22,7 +22,6 @@ public class TriggerButtonWithKey : MonoBehaviour
          {
             //  Debug.Log("Button pressed");
             if(myButton != null && active){
-                Debug.Log(myButton.name);
                 myButton.onClick.Invoke();
             }
          }

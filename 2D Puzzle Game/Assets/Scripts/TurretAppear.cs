@@ -15,7 +15,6 @@ public class TurretAppear : MonoBehaviour
     void Update()
     {
         if(g==null){
-            Debug.Log("hello works");
             gameObject.GetComponent<TurretFire>().enabled=true;
             gameObject.GetComponent<SpriteRenderer>().enabled=true;
         }
