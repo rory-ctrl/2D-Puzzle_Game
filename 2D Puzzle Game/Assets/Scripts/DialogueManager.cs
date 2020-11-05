@@ -72,7 +72,7 @@ using UnityEngine.UI;
             dialogueText.text = "";
             foreach(char letter in sentence.ToCharArray()){
                 dialogueText.text +=letter;
-                yield return new WaitForSeconds(0.06f);
+                yield return new WaitForSeconds(0.03f);
             }
             
         }
@@ -90,8 +90,11 @@ using UnityEngine.UI;
                 StopCoroutine(cor);  
             }
 
-            if(this.gameObject.name == "AntagonistDialogueManager"){
-                GameValues.score -= 1;
+            if(this.gameObject.name == "DragonDialogueManager"){
+                if(GameValues.score >= 1){
+                    GameValues.score -= 1;
+                }
+                
             }
             // m_beenDismissed = true;
             m_playerScript.setTalking(false);

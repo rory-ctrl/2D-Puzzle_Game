@@ -287,7 +287,7 @@ PrefabInstance:
     - target: {fileID: 6287523744026529343, guid: ce1cf45fa36ceb74aa0d496fadb18271,
         type: 3}
       propertyPath: dialogue.sentences.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6287523744026529343, guid: ce1cf45fa36ceb74aa0d496fadb18271,
         type: 3}
@@ -303,23 +303,34 @@ PrefabInstance:
     - target: {fileID: 6287523744026529343, guid: ce1cf45fa36ceb74aa0d496fadb18271,
         type: 3}
       propertyPath: dialogue.sentences.Array.data[1].name
-      value: CONTROLS
+      value: HINT
       objectReference: {fileID: 0}
     - target: {fileID: 6287523744026529343, guid: ce1cf45fa36ceb74aa0d496fadb18271,
         type: 3}
       propertyPath: dialogue.sentences.Array.data[1].sentence
+      value: The TimeSuit can control and warp time itself. Be warned though, there
+        are always consequences for changing the Timeline.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287523744026529343, guid: ce1cf45fa36ceb74aa0d496fadb18271,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[2].name
+      value: CONTROLS
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287523744026529343, guid: ce1cf45fa36ceb74aa0d496fadb18271,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[2].sentence
       value: Hold the "Q" button to use the TimeSuit's slowmo ability. All of time
         will slow down around you. As the ability is active you burn through your
         TimeJuice.
       objectReference: {fileID: 0}
     - target: {fileID: 6287523744026529343, guid: ce1cf45fa36ceb74aa0d496fadb18271,
         type: 3}
-      propertyPath: dialogue.sentences.Array.data[2].name
+      propertyPath: dialogue.sentences.Array.data[3].name
       value: HINT
       objectReference: {fileID: 0}
     - target: {fileID: 6287523744026529343, guid: ce1cf45fa36ceb74aa0d496fadb18271,
         type: 3}
-      propertyPath: dialogue.sentences.Array.data[2].sentence
+      propertyPath: dialogue.sentences.Array.data[3].sentence
       value: It might make it easier to make those jumps! But be careful, the TimeJuice
         doesn't regenerate very quickly so use it wisely!
       objectReference: {fileID: 0}

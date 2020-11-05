@@ -1260,7 +1260,7 @@ PrefabInstance:
         there.........
 
 
-        --- Use the ''f'' key to progress through conversation
+        --- Use the ''F'' key to progress through conversation
         ---'
       objectReference: {fileID: 0}
     - target: {fileID: 6287523744026529343, guid: ce1cf45fa36ceb74aa0d496fadb18271,

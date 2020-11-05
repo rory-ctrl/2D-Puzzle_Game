@@ -1212,8 +1212,8 @@ PrefabInstance:
     - target: {fileID: 6287523744026529343, guid: ce1cf45fa36ceb74aa0d496fadb18271,
         type: 3}
       propertyPath: dialogue.sentences.Array.data[1].sentence
-      value: It's a good thing it's been my job to clean the forcefields for the
-        last 2.5 Billion years.
+      value: It's a good thing it's been my job to clean the TimeSuits for the last
+        2.5 Billion years.
       objectReference: {fileID: 0}
     - target: {fileID: 6287523744026529343, guid: ce1cf45fa36ceb74aa0d496fadb18271,
         type: 3}
@@ -1223,8 +1223,8 @@ PrefabInstance:
     - target: {fileID: 6287523744026529343, guid: ce1cf45fa36ceb74aa0d496fadb18271,
         type: 3}
       propertyPath: dialogue.sentences.Array.data[2].sentence
-      value: Use the "E" button to interact with controls and pickup key items. Like
-        that good looking suit.
+      value: Use the "E" button to interact with buttons and pickup key items. Try
+        it on that good looking suit!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce1cf45fa36ceb74aa0d496fadb18271, type: 3}
