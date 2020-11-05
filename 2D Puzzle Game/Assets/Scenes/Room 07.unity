@@ -10867,7 +10867,7 @@ PrefabInstance:
     - target: {fileID: 8342190681751559055, guid: c64d90ebd5c7a33478371cf03d1dde2f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.2
+      value: -1.61
       objectReference: {fileID: 0}
     - target: {fileID: 8342190681751559055, guid: c64d90ebd5c7a33478371cf03d1dde2f,
         type: 3}
@@ -11105,8 +11105,7 @@ PrefabInstance:
     - target: {fileID: 6287523744026529343, guid: ce1cf45fa36ceb74aa0d496fadb18271,
         type: 3}
       propertyPath: dialogue.sentences.Array.data[0].sentence
-      value: From what the Elders taught us, these TimeSuit's hold immeasureable
-        potential.
+      value: From what the Elders taught us, these TimeSuits hold immeasureable potential.
       objectReference: {fileID: 0}
     - target: {fileID: 6287523744026529343, guid: ce1cf45fa36ceb74aa0d496fadb18271,
         type: 3}

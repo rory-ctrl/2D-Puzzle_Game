@@ -1292,7 +1292,7 @@ PrefabInstance:
     - target: {fileID: 6287523744026529343, guid: ce1cf45fa36ceb74aa0d496fadb18271,
         type: 3}
       propertyPath: dialogue.sentences.Array.data[3].sentence
-      value: Use the W, A, S, D buttons to move yourself around the room.
+      value: Use the "A" and "D" buttons to move yourself around the room.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce1cf45fa36ceb74aa0d496fadb18271, type: 3}

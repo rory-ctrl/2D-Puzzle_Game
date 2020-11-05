@@ -19657,6 +19657,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4293928843800313056, guid: ab9043a2136ff3c4a899a9ea3bbefb07,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -848434203
+      objectReference: {fileID: 0}
+    - target: {fileID: 4293928843800313056, guid: ab9043a2136ff3c4a899a9ea3bbefb07,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4293928843800313059, guid: ab9043a2136ff3c4a899a9ea3bbefb07,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20668,7 +20678,7 @@ PrefabInstance:
     - target: {fileID: 6287523744026529343, guid: ce1cf45fa36ceb74aa0d496fadb18271,
         type: 3}
       propertyPath: dialogue.sentences.Array.data[3].sentence
-      value: Now that I've destroyed all of the TimeSuits' no one will be able to
+      value: Now that I've destroyed all of the TimeSuits no one will be able to
         stop me!
       objectReference: {fileID: 0}
     - target: {fileID: 6287523744026529343, guid: ce1cf45fa36ceb74aa0d496fadb18271,
