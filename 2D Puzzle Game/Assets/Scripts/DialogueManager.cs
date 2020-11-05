@@ -94,8 +94,9 @@ using UnityEngine.UI;
                 if(GameValues.score >= 1){
                     GameValues.score -= 1;
                 }
-                
+                GameValues.shouldPlay = true;
             }
+
             // m_beenDismissed = true;
             m_playerScript.setTalking(false);
         }

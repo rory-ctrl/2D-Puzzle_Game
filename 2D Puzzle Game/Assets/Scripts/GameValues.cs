@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameValues
 {
+    public static bool shouldPlay = false;
+
     public static int score {get; set;}
     public static int respawns {get; set;}
 

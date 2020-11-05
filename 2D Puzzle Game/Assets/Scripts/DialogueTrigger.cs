@@ -68,6 +68,10 @@ public class DialogueTrigger : MonoBehaviour
             hasTriggered = true;
             GameObject.Find("TiredDialogueManager").GetComponent<DialogueManager>().StartDialogue(dialogue);
         }
+        else if(this.name == "TimePortalDialogueTrigger"){
+            hasTriggered = true;
+            GameObject.Find("DragonDialogueManager").GetComponent<DialogueManager>().StartDialogue(dialogue);
+        }
         
     }
 
