@@ -42835,6 +42835,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7919831007591261416, guid: df0feaf922e5c4c48a9da9794e5f669f,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 255166391
+      objectReference: {fileID: 0}
+    - target: {fileID: 7919831007591261416, guid: df0feaf922e5c4c48a9da9794e5f669f,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df0feaf922e5c4c48a9da9794e5f669f, type: 3}
 --- !u!1001 &390682435
@@ -43271,6 +43281,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4293928843800313056, guid: ab9043a2136ff3c4a899a9ea3bbefb07,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 255166391
+      objectReference: {fileID: 0}
+    - target: {fileID: 4293928843800313056, guid: ab9043a2136ff3c4a899a9ea3bbefb07,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4293928843800313059, guid: ab9043a2136ff3c4a899a9ea3bbefb07,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -43390,6 +43410,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Crystal (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4293928843800313086, guid: ab9043a2136ff3c4a899a9ea3bbefb07,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab9043a2136ff3c4a899a9ea3bbefb07, type: 3}

@@ -25,7 +25,7 @@ TagManager:
   - Foreground
   - Background_01
   - Background_02
-  - 
+  - Dialogues
   - 
   - 
   - 
@@ -62,4 +62,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 1785429357
+    locked: 0
+  - name: UI
+    uniqueID: 1644115159
     locked: 0
