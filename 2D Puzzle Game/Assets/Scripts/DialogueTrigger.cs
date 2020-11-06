@@ -46,11 +46,12 @@ public class DialogueTrigger : MonoBehaviour
         }
         else if(this.name == "SuitDialogueTrigger"){
             hasTriggered = true;
+            
             GameObject.Find("SuitDialogueManager").GetComponent<DialogueManager>().StartDialogue(dialogue);
         }
         else if(this.name == "SuitPickupTrigger"){
             hasTriggered = true;
-            GameObject.Find("SuitDialogueManager").GetComponent<DialogueManager>().StartDialogue(dialogue);
+            GameObject.Find("SuitPickupDialogueManager").GetComponent<DialogueManager>().StartDialogue(dialogue);
         }
         else if(this.name == "AntagonistDialogueTrigger"){
             hasTriggered = true;

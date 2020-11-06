@@ -14,7 +14,7 @@ public class TurretFire : MonoBehaviour
     public int health=100;
     // Update is called once per frame\
     private bool dead=false;
-    private bool shouldFire = false;
+    
     public void TakeDamage(int dmg)
     {
         health=health-dmg;
@@ -27,15 +27,16 @@ public class TurretFire : MonoBehaviour
     
     void Update()
     {
-        if(shouldFire){
-           fire(); 
-        }
+        // if(GameValues.shouldShoot == true){
+        //    fire(); 
+        // }
+        fire();
         
     }
     void fire()
     {
         //only fires if the attack speed time has passed.
-        if(!dead){
+        if(!dead && GameValues.shouldShoot){
         if (Time.time > fireRate + lastShot)
      {
          Instantiate(bullet, firePoint.position, firePoint.rotation);  
@@ -45,19 +46,19 @@ public class TurretFire : MonoBehaviour
     }
     }
 
-    void OnTriggerEnter2D(Collider2D trigger){
-        GameObject player = GameObject.Find("TimeAgentPlayer");
+    // void OnTriggerEnter2D(Collider2D trigger){
+    //     GameObject player = GameObject.Find("TimeAgentPlayer");
 
-        if(player!= null){
-            shouldFire = true;
-        }
-    }
+    //     if(player!= null){
+    //         shouldFire = true;
+    //     }
+    // }
 
-    void OnTriggerExit2D(Collider2D trigger){
-        GameObject player = GameObject.Find("TimeAgentPlayer");
+    // void OnTriggerExit2D(Collider2D trigger){
+    //     GameObject player = GameObject.Find("TimeAgentPlayer");
 
-        if(player!= null){
-            shouldFire = false;
-        }
-    }
+    //     if(player!= null){
+    //         shouldFire = false;
+    //     }
+    // }
 }

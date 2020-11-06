@@ -90,11 +90,15 @@ using UnityEngine.UI;
                 StopCoroutine(cor);  
             }
 
-            if(this.gameObject.name == "DragonDialogueManager"){
+            if(gameObject.name == "DragonDialogueManager"){
                 if(GameValues.score >= 1){
                     GameValues.score -= 1;
                 }
-                GameValues.shouldPlay = true;
+            }
+
+            if(gameObject.name == "SuitPickupDialogueManager"){
+                Debug.Log("Firing");
+                GameValues.shouldShoot = true;
             }
 
             // m_beenDismissed = true;
