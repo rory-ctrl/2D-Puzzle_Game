@@ -710,9 +710,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "2D Puzzle Game\n\nCreated By:\nJosiah Harrison\n\nKaiwen Ji\n\nBenjamin
-    Korcz\n\nRory Mackin\n\n Brayden Tansell\n\nNathan Tsafaras\n\nMusic By:\nBen
-    Sound"
+  m_Text: "Chronorum\n\nCreated By:\nJosiah Harrison\n\nKaiwen Ji\n\nBenjamin Korcz\n\nRory
+    Mackin\n\n Brayden Tansell\n\nNathan Tsafaras\n\nMusic By:\nBen Sound"
 --- !u!222 &1396263086
 CanvasRenderer:
   m_ObjectHideFlags: 0
